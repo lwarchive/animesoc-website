@@ -15,6 +15,19 @@
             <img src="https://static.wikia.nocookie.net/joke-battles/images/7/76/Jotaro_kujo_render_by_lord_nabuco-d98uhp5.png/revision/latest/scale-to-width-down/350?cb=20161013004213">
         </div>
 
+        <div class="events">
+            upcoming events:
+            <br> <br>
+            {% for event in events %}
+                <div class="event">
+                {{ event.name }} <br>
+                {{ event.event_time }} <br>
+                {{ event.event_location }} <br>
+                {{ event.event_description }} <br>
+                </div>
+            {% endfor %}
+        </div>
+
     </body>
 
 </html>

@@ -2,3 +2,14 @@
 .teststyle {
     background-color: #d48a8a;
 }
+
+.events {
+    background-color: lightgray;
+    padding: 10px;
+}
+
+.event {
+    background-color: darkgray;
+    padding: 10px;
+    width: 30%;
+}
