@@ -1,4 +1,8 @@
 
+body {
+    background-color: black;
+}
+
 .headerbar {
     display: flex;
     flex-direction: row;
@@ -12,11 +16,41 @@
     height: auto;
 }
 
+.navigationbar {
+    background-color: darkgray;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.navigationlink {
+    padding: 20px;
+    margin-left: 120px;
+    margin-right: 120px;
+    font-family: 'Lato', sans-serif;
+    font-size: 30px;
+}
+
 .title {
     color: white;
     font-family: 'Fredoka One', cursive;
     padding-left: 40px;
-    font-size: 50px;
+    font-size: 60px;
+}
+
+.subtitle {
+    color: white;
+    font-family: 'Fredoka One', cursive;
+    font-size: 20px;
+}
+
+.about {
+    background-color: darksalmon;
+}
+
+.joinus {
+    background-color: darkturquoise;
 }
 
 .events {
@@ -25,11 +59,12 @@
 }
 
 .event {
+    font-family: 'Lato', sans-serif;
     background-color: darkgray;
     padding: 10px;
     width: 30%;
 }
 
-body {
-    background-color: darkgray;
+.committee {
+    background-color: forestgreen;
 }

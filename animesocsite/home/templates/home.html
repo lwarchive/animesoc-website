@@ -7,15 +7,36 @@
         <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Lato&display=swap" rel="stylesheet">
+        <title> Anime & Manga Society </title>
+        <link rel="icon" href="{% static 'anime soc logo2.png' %}">
     </head>
 
     <body> 
 
         <div class="headerbar">
             <img src="{% static 'anime soc logo2.png' %}"> 
-            <div class="title"> Anime & Manga Society <br> Royal Holloway's hangout for fans of anime, manga, and Japanese media </div>
-            
+            <div class="title"> 
+                Anime & Manga Society <br> 
+                <div class="subtitle"> 
+                    Royal Holloway's hangout for fans of anime, manga, and Japanese media 
+                </div> 
+            </div>
+        </div>
+
+        <div class="navigationbar">
+            <div class="navigationlink"> About </div>
+            <div class="navigationlink"> Join Us </div>
+            <div class="navigationlink"> Events </div>
+            <div class="navigationlink"> Committee </div>
+        </div>
+
+        <div class="about">
+            About the society, some text
+        </div>
+
+        <div class="joinus">
+            How to join the society, social media links
         </div>
 
         <div class="events">
@@ -29,6 +50,10 @@
                 {{ event.event_description }} <br>
                 </div>
             {% endfor %}
+        </div>
+
+        <div class="committee">
+            who's in the committee
         </div>
 
     </body>
