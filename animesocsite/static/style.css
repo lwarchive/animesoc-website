@@ -17,7 +17,9 @@ body {
 }
 
 .navigationbar {
+    top: 0px;
     position: sticky;
+    position: -webkit-sticky;
     background-color: darkgray;
     display: flex;
     flex-direction: row;
