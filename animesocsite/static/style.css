@@ -3,6 +3,10 @@ body {
     background-color: black;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 .headerbar {
     display: flex;
     flex-direction: row;
