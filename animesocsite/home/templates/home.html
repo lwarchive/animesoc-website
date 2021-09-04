@@ -3,6 +3,8 @@
 
 <html>
 
+
+
     <head> 
         <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,21 +27,21 @@
         </div>
 
         <div class="navigationbar">
-            <div class="navigationlink"> About </div>
-            <div class="navigationlink"> Join Us </div>
-            <div class="navigationlink"> Events </div>
-            <div class="navigationlink"> Committee </div>
+            <div class="navigationlink"> <a href="#about"> About </a> </div>
+            <div class="navigationlink"> <a href="#joinus"> Join Us </a> </div>
+            <div class="navigationlink"> <a href="#events"> Events </a> </div>
+            <div class="navigationlink"> <a href="#committee"> Committee </a> </div>
         </div>
 
-        <div class="about">
+        <div class="about" id="about">
             About the society, some text
         </div>
 
-        <div class="joinus">
+        <div class="joinus" id="joinus">
             How to join the society, social media links
         </div>
 
-        <div class="events">
+        <div class="events" id="events">
             upcoming events:
             <br> <br>
             {% for event in events %}
@@ -52,9 +54,23 @@
             {% endfor %}
         </div>
 
-        <div class="committee">
+        <div class="committee" id="committee">
             who's in the committee
         </div>
+
+        <script>
+            let anchorSelector = 'a[href^="#"]';
+            $(anchorSelector).on('click', function (e) {
+                e.preventDefault();
+                let destination = $(this.hash);
+                let scrollPosition
+                    = destination.offset().top;
+                let animationDuration = 500;
+                $('html, body').animate({
+                    scrollTop: scrollPosition
+                }, animationDuration);
+            });
+        </script>
 
     </body>
 

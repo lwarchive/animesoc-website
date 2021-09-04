@@ -17,6 +17,7 @@ body {
 }
 
 .navigationbar {
+    position: sticky;
     background-color: darkgray;
     display: flex;
     flex-direction: row;
@@ -46,14 +47,17 @@ body {
 }
 
 .about {
+    height: 800px;
     background-color: darksalmon;
 }
 
 .joinus {
+    height: 800px;
     background-color: darkturquoise;
 }
 
 .events {
+    height: 800px;
     background-color: lightgray;
     padding: 30px;
 }
@@ -66,5 +70,6 @@ body {
 }
 
 .committee {
+    height: 800px;
     background-color: forestgreen;
 }
