@@ -75,10 +75,16 @@ a {
     width: auto;
 }
 
+.smstray img:hover {
+    opacity: 0.7;
+}
+
 .copy {
     font-family: 'Lato', sans-serif;
     font-size: 20px;
-    padding: 20px;
+    padding: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 .sectiontitle {
@@ -86,7 +92,7 @@ a {
     font-size: 80px;
     width: 100%;
     text-align: center;
-    padding-top: 20px;
+    padding-top: 50px;
     padding-bottom: 20px;
     opacity: 1;
 }
@@ -125,12 +131,12 @@ a {
 }
 
 .joinus {
-    background-color: darkturquoise;
+    background-color: black;
+    color: #f48023;
 }
 
 .events {
     background-color: lightgray;
-    padding: 30px;
 }
 
 .eventsdisplay {
