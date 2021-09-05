@@ -54,21 +54,28 @@
         </div>
 
         <div class="events" id="events">
-            upcoming events:
+            <div class="copy"> <u> Upcoming Society Events </u> </div>
             <br> <br>
-            {% for event in events %}
-                <div class="event">
-                {{ event.name }} <br>
-                {{ event.event_time }} <br>
-                {{ event.event_location }} <br>
-                {{ event.event_description }} <br>
-                </div>
-            {% endfor %}
+            <div class="eventsdisplay">
+                {% for event in events %}
+                    <div class="event">
+                    {{ event.name }} <br>
+                    {{ event.event_time }} <br>
+                    {{ event.event_location }} <br>
+                    {{ event.event_description }} <br>
+                    </div>
+                {% endfor %}
+            </div>
         </div>
 
         <div class="committee" id="committee">
             <div class="copy">
                 who's in the committee
+            </div>
+            <div class="committeeimages">
+                <img src="{% static 'president.png' %}">
+                <img src="{% static 'treasurer.png' %}">
+                <img src="{% static 'secretary.png' %}">
             </div>
         </div>
 

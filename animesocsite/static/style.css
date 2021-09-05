@@ -20,7 +20,7 @@ a {
 
 .headerbar img {
     padding: 10px;
-    width: 250px;
+    width: 200px;
     height: auto;
 }
 
@@ -40,7 +40,7 @@ a {
     margin-left: 120px;
     margin-right: 120px;
     font-family: 'Fredoka One', cursive;
-    font-size: 30px;
+    font-size: 24px;
 }
 
 .navigationlink a {
@@ -55,7 +55,7 @@ a {
     color: white;
     font-family: 'Fredoka One', cursive;
     padding-left: 40px;
-    padding-right: 800px;
+    padding-right: 750px;
     font-size: 60px;
 }
 
@@ -82,7 +82,7 @@ a {
 
 .about {
     height: 800px;
-    background-color: darksalmon;
+    background-color: #c8edff;
 }
 
 .joinus {
@@ -96,14 +96,30 @@ a {
     padding: 30px;
 }
 
+.eventsdisplay {
+    display: flex;
+}
+
 .event {
     font-family: 'Lato', sans-serif;
     background-color: darkgray;
     padding: 10px;
-    width: 30%;
+    margin: 20px;
+    width: 400px;
 }
 
 .committee {
-    height: 800px;
-    background-color: forestgreen;
+    height: 730px;
+    background-color: black;
+    color: white;
+}
+
+.committeeimages {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.committee img {
+    width: 30%;
+    height: auto;
 }
