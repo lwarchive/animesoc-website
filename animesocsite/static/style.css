@@ -25,6 +25,7 @@ a {
 }
 
 .navigationbar {
+    z-index: 100;
     top: 0px;
     position: sticky;
     position: -webkit-sticky;
@@ -87,10 +88,40 @@ a {
     text-align: center;
     padding-top: 20px;
     padding-bottom: 20px;
+    opacity: 1;
 }
 
 .about {
-    background-color: #c8edff;
+    background-image: url("art.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 850px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.about::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.about > div {
+    text-shadow: 2px 2px 5px black;
+    position: relative;
+    z-index: 1;
 }
 
 .joinus {
@@ -122,6 +153,8 @@ a {
 .committeeimages {
     display: flex;
     justify-content: space-evenly;
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
 
 .committee img {
