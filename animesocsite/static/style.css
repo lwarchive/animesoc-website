@@ -80,18 +80,24 @@ a {
     padding: 20px;
 }
 
+.sectiontitle {
+    font-family: 'Fredoka One', cursive;
+    font-size: 80px;
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
 .about {
-    height: 800px;
     background-color: #c8edff;
 }
 
 .joinus {
-    height: 800px;
     background-color: darkturquoise;
 }
 
 .events {
-    height: 800px;
     background-color: lightgray;
     padding: 30px;
 }
@@ -109,7 +115,6 @@ a {
 }
 
 .committee {
-    height: 730px;
     background-color: black;
     color: white;
 }
