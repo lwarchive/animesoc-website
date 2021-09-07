@@ -3,8 +3,6 @@
 
 <html>
 
-
-
     <head> 
         <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -51,7 +49,13 @@
         </div>
 
         <div class="joinus" id="joinus">
-            <div class="sectiontitle"> Join Us </div>
+            <div class="sectiontitle"> Join Us </div> <br>
+            <div class="joinus-buttoncontainer"> <b>
+                <a class="joinusbutton" href="https://www.su.rhul.ac.uk/societies/a-z/animeandmanga/" target="_blank"> Buy Membership </a>
+                <a class="joinusbutton" href="https://discord.gg/TcvRq2H" target="_blank"> Join our Discord </a>
+                <a class="joinusbutton" href="https://www.facebook.com/groups/animemangarhul" target="_blank"> Follow our Facebook Page </a>
+                <a class="joinusbutton" href="https://www.instagram.com/rhulanime/" target="_blank"> Check out our Instagram </a>
+            </div> </b>
             <div class="copy">
                 Our membership fee covers entry into our prize draws and quizzes for the term, and also our weekly events! <br> 
                 Your membership supports us by ensuring that we can continue to provide great prizes for our giveaways, and more importantly lets the society deliver the same fun, enjoyable experience for years to come.
@@ -64,16 +68,16 @@
 
         <div class="events" id="events">
             <div class="sectiontitle"> Upcoming Events </div>
-            <div class="copy"> <u> Upcoming Society Events </u> </div>
-            <br> <br>
+            <br>
             <div class="eventsdisplay">
                 {% for event in events %}
                     <div class="event">
-                    {{ event.name }} <br>
-                    {{ event.event_time }} <br>
-                    {{ event.event_location }} <br>
-                    {{ event.event_description }} <br>
-                    </div>
+                    <div class="eventTitle"> <b> {{ event.name }} </b> </div>
+                    <div class="eventDesc"> 
+                        <b> Where: {{ event.event_location }} <br>
+                        When: {{ event.event_time }} <br> </b>
+                        <i> {{ event.event_description }} </i> <br>
+                    </div> </div>
                 {% endfor %}
             </div>
         </div>
@@ -85,6 +89,10 @@
                 <img src="{% static 'treasurer.png' %}">
                 <img src="{% static 'secretary.png' %}">
             </div>
+        </div>
+
+        <div class="credit">
+            site by <a href="https://www.linkedin.com/in/stephanie-flower-099478178/" target="_blank"> steph! </a>
         </div>
 
         <script>
