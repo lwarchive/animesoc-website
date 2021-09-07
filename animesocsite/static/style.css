@@ -46,6 +46,7 @@ a {
 
 .navigationlink a {
     color: black;
+    transition: 0.4s;
 }
 
 .navigationlink a:hover {
@@ -73,6 +74,7 @@ a {
 .smstray img {
     height: 40px;
     width: auto;
+    transition: 0.4s;
 }
 
 .smstray img:hover {
@@ -124,10 +126,17 @@ a {
     background-color: rgba(0, 0, 0, 0.3);
 }
 
+@keyframes fadein {
+    from {opacity: 0; top: 30px;}
+    to {opacity: 1; top: 0px;}
+}
+
 .about > div {
     text-shadow: 2px 2px 5px black;
     position: relative;
     z-index: 1;
+    animation-name: fadein;
+    animation-duration: 1.5s;
 }
 
 .joinus {
@@ -147,6 +156,8 @@ a {
     font-size: 20px;
     margin: 20px;
     padding: 20px;
+    border-radius: 3px;
+    transition: 0.4s;
 }
 
 .joinusbutton:hover {
@@ -175,7 +186,7 @@ a {
     margin: 40px;
     width: 400px;
     min-height: 400px;
-    border-radius: 3px;
+    border-radius: 5px;
 }
 
 .eventTitle {
