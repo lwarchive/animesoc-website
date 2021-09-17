@@ -238,6 +238,12 @@ a {
     font-size: 5vw;
 }
 
+@media screen and (min-width: 840px) {
+    .eventsdisplay {
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    }
+}
+
 @media screen and (min-width: 630px) {
     .eventTitle {
         font-size: 40px;
