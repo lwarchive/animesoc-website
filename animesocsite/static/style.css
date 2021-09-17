@@ -16,11 +16,17 @@ a {
     flex-direction: row;
     align-items: center;
     background-color: black;
+    flex-wrap: wrap;
 }
 
 .headerbar img {
     padding: 1vw;
-    height: 9vw;
+    height: 15vw;
+}
+@media screen and (min-width: 1200px) {
+    .headerbar img {
+        height: 200px;
+    }
 }
 
 .navigationbar {
@@ -60,7 +66,12 @@ a {
     font-family: 'Fredoka One', cursive;
     padding-left: 1vw;
     padding-right: 1vw;
-    font-size: 3vw;
+    font-size: 6vw;
+}
+@media screen and (min-width: 1200px) {
+    .title {
+        font-size: 80px;
+    }
 }
 
 .subtitle {
@@ -72,18 +83,28 @@ a {
 .smstray {
     display: flex;
     justify-content: flex-end;
-    width: 50%;
+    padding-left: 200px;
     flex-wrap: wrap;
 }
 
 .smstray img {
-    height: 2vw;
+    height: 60px;
     width: auto;
     transition: 0.4s;
 }
 
 .smstray img:hover {
     opacity: 0.7;
+}
+
+@media screen and (max-width: 1800px) {
+    .smstray {
+        padding-left: 35%;
+    }
+
+    .smstray img {
+        height: 5vw;
+    }
 }
 
 .copy {
