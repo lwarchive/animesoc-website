@@ -209,7 +209,7 @@ a {
 
 .eventsdisplay {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 1rem;
     grid-auto-flow: row;
     margin-left: auto;
@@ -224,10 +224,10 @@ a {
     min-height: auto;
     border-radius: 5px;
     box-sizing: border-box;
-}
+} 
 
 .eventTitle {
-    font-size: 30px;
+    font-size: 7vw;
     padding-top: 10px;
     padding-inline: 10px;
     text-align: center;
@@ -235,7 +235,17 @@ a {
 
 .eventDesc {
     padding: 20px;
-    font-size: 20px;
+    font-size: 5vw;
+}
+
+@media screen and (min-width: 630px) {
+    .eventTitle {
+        font-size: 40px;
+    }
+    
+    .eventDesc {
+        font-size: 20px;
+    }
 }
 
 .committee {
