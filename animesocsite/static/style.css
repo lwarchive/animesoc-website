@@ -245,14 +245,21 @@ a {
 .committeeimages {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
     padding-bottom: 20px;
     padding-top: 20px;
-}
+} 
 
 .committee img {
     width: 30%;
     height: auto;
+} @media screen and (max-width: 1024px) {
+    .committee img {
+        width: 90vw;
+        margin-top: 20px;
+    }
 }
+
 
 .credit {
     font-family: 'Lato', sans-serif;
