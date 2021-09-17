@@ -15,22 +15,22 @@
         </script>
     </head>
 
-    <body> 
+    <body>
 
 
         <div class="headerbar">
-            <img src="{% static 'anime soc logo2.png' %}"> 
-            <div class="title"> 
-                Anime & Manga Society <br> 
-                <div class="subtitle"> 
-                    Royal Holloway's hangout for fans of anime, manga, and Japanese media 
-                </div> 
+            <img src="{% static 'anime soc logo2.png' %}">
+            <div class="title">
+                Anime & Manga Society <br>
+                <div class="subtitle">
+                    Royal Holloway's hangout for fans of anime, manga, and Japanese media
+                </div>
             </div>
             <div class="smstray">
-                <a href="https://www.su.rhul.ac.uk/societies/a-z/animeandmanga/"> <img src="{% static 'rhsu-logo.svg' %}"> </a>
-                <a href="https://discord.gg/TcvRq2H"> <img src="{% static 'discord-logo.svg' %}"> </a>
-                <a href="https://www.facebook.com/groups/animemangarhul"> <img src="{% static 'facebook-logo.svg' %}"> </a>
-                <a href="https://www.instagram.com/rhulanime/"> <img src="{% static 'instagram-logo.svg' %}"> </a>
+                <a href="https://www.su.rhul.ac.uk/societies/a-z/animeandmanga/"> <img alt="Royal Holloway Students' Union" src="{% static 'rhsu-logo.svg' %}"> </a>
+                <a href="https://rhulani.me/discord"> <img alt="Discord" src="{% static 'discord-logo.svg' %}"> </a>
+                <a href="https://www.facebook.com/groups/animemangarhul"> <img alt="Facebook" src="{% static 'facebook-logo.svg' %}"> </a>
+                <a href="https://www.instagram.com/rhulanime/"> <img alt src="{% static 'instagram-logo.svg' %}"> </a>
             </div>
         </div>
 
@@ -54,17 +54,11 @@
             <div class="sectiontitle"> Join Us </div> <br>
             <div class="joinus-buttoncontainer">
                 <a class="joinusbutton" href="https://www.su.rhul.ac.uk/societies/a-z/animeandmanga/" target="_blank"> Buy Membership </a>
-                <a class="joinusbutton" href="https://discord.gg/TcvRq2H" target="_blank"> Join our Discord </a>
+                <a class="joinusbutton" href="https://rhulani.me/discord" target="_blank"> Join our Discord </a>
                 <a class="joinusbutton" href="https://www.facebook.com/groups/animemangarhul" target="_blank"> Follow our Facebook Page </a>
                 <a class="joinusbutton" href="https://www.instagram.com/rhulanime/" target="_blank"> Check out our Instagram </a>
             </div>
             <div class="copy">
-                Our membership fee covers entry into our prize draws and quizzes for the term, and also our weekly events! <br> 
-                Your membership supports us by ensuring that we can continue to provide great prizes for our giveaways, and more importantly lets the society deliver the same fun, enjoyable experience for years to come.
-                <br> <br>
-                <u> A small note on COVID-19: </u>
-                <br> Due to regulations put forward by the Students' Union, we can not allow non-members to join our physical events. 
-                <br> Moreover, on our weekly Thursday event (Seasonal Anime Night) we will require proof of membership before being able to join our stream - for theme nights on Tuesdays, however, anybody is free to join online.
             </div>
         </div>
 
@@ -76,10 +70,10 @@
                     {% if event.show_event %}
                         <div class="event">
                         <div class="eventTitle"> <b> {{ event.name }} </b> </div>
-                        <div class="eventDesc"> 
-                            <b> Where: {{ event.event_location }} <br>
-                            When: {{ event.event_time }} <br> </b>
-                            <i> {{ event.event_description }} </i> <br>
+                        <div class="eventDesc">
+                            <b> Where: {{ event.event_location|safe }} <br>
+                            When: {{ event.event_time|date:"l jS M, g:iA" }} <br> </b>
+                            <i> {{ event.event_description|safe }} </i> <br>
                         </div> </div>
                     {% endif %}
                 {% endfor %}
@@ -89,9 +83,9 @@
         <div class="committee" id="committee">
             <div class="sectiontitle"> Our Committee </div>
             <div class="committeeimages">
-                <img src="{% static 'president.jpg' %}">
-                <img src="{% static 'treasurer.jpg' %}">
-                <img src="{% static 'secretary.jpg' %}">
+                <img alt="President Jamie Dootson" src="{% static 'president.jpg' %}">
+                <img alt="Treasurer Mia Marumoto Quinn" src="{% static 'treasurer.jpg' %}">
+                <img alt="Secretary Dylan Goddard" src="{% static 'secretary.jpg' %}">
             </div>
         </div>
 
