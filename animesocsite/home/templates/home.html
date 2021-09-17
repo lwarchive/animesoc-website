@@ -73,13 +73,15 @@
             <br>
             <div class="eventsdisplay">
                 {% for event in events %}
-                    <div class="event">
-                    <div class="eventTitle"> <b> {{ event.name }} </b> </div>
-                    <div class="eventDesc"> 
-                        <b> Where: {{ event.event_location }} <br>
-                        When: {{ event.event_time }} <br> </b>
-                        <i> {{ event.event_description }} </i> <br>
-                    </div> </div>
+                    {% if event.show_event %}
+                        <div class="event">
+                        <div class="eventTitle"> <b> {{ event.name }} </b> </div>
+                        <div class="eventDesc"> 
+                            <b> Where: {{ event.event_location }} <br>
+                            When: {{ event.event_time }} <br> </b>
+                            <i> {{ event.event_description }} </i> <br>
+                        </div> </div>
+                    {% endif %}
                 {% endfor %}
             </div>
         </div>
