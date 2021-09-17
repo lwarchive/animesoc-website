@@ -38,7 +38,12 @@ a {
 .navigationlink {
     padding: 5px;
     font-family: 'Fredoka One', cursive;
-    font-size: 24px;
+    font-size: 5vw;
+}
+@media screen and (min-width: 800px) {
+    .navigationlink {
+        font-size: 24px;
+    }
 }
 
 .navigationlink a {
@@ -91,12 +96,17 @@ a {
 
 .sectiontitle {
     font-family: 'Fredoka One', cursive;
-    font-size: 80px;
+    font-size: 10vw;
     width: 100%;
     text-align: center;
     padding-top: 50px;
     padding-bottom: 20px;
     opacity: 1;
+}
+@media screen and (min-width: 800px) {
+    .sectiontitle {
+        font-size: 80px;
+    }
 }
 
 .about {
