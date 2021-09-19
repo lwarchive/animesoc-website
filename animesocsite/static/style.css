@@ -114,6 +114,34 @@ a {
     margin: 0 auto;
 }
 
+.mailing-list > input[type=submit] {
+    border: 1px solid transparent;
+    border-bottom-color: #ccc;
+    padding: 12px 20px;
+    min-width: 30%;
+    background-color: #f48023;
+    color: black;
+    font-size: 18px;
+    border-radius: 3px;
+    transition: 0.4s;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+}
+
+.mailing-list > input[type=submit]:hover {
+    opacity: 0.7;
+}
+
+.mailing-list > p > input[type=email] {
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
 .sectiontitle {
     font-family: 'Fredoka One', cursive;
     font-size: 10vw;

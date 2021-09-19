@@ -1,4 +1,4 @@
 from django import forms
 
 class EmailForm(forms.Form):
-    email = forms.CharField(label="Enter Email", max_length=50)
+    email = forms.EmailField(label="Enter email", max_length=50)

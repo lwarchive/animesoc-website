@@ -48,6 +48,16 @@
                 We're a friendly, open, and inclusive society, who gather weekly to watch Japanese animation (also known as anime) and discuss our interests in manga. <br>
                 Our main weekly activities consist of watching anime and other associated media together. <br>
             </div>
+            <div class="copy">
+                Subscribe to our mailing list:
+                <form action="#" method="post">
+                    {% csrf_token %}
+                    <div class="mailing-list">
+                        {{ form.as_p }}
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </div>
         </div>
 
         <div class="joinus" id="joinus">
@@ -59,12 +69,6 @@
                 <a class="joinusbutton" href="https://www.instagram.com/rhulanime/" target="_blank"> Check out our Instagram </a>
             </div>
             <div class="copy">
-                Subscribe to our mailing list:
-                <form action="#" method="post">
-                    {% csrf_token %}
-                    {{ form.as_p }}
-                    <input type="submit" value="Submit">
-                </form>
             </div>
         </div>
 

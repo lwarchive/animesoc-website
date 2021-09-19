@@ -12,7 +12,7 @@ class Event(models.Model):
         return self.event_time.strftime("%d") + "/" + self.event_time.strftime("%m") + ": " + self.name
 
 class Email(models.Model):
-    email = models.CharField("Enter Email:", max_length=50)
+    email = models.EmailField("Enter email:", max_length=50)
 
     def __str__(self):
         return self.email
