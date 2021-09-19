@@ -59,6 +59,12 @@
                 <a class="joinusbutton" href="https://www.instagram.com/rhulanime/" target="_blank"> Check out our Instagram </a>
             </div>
             <div class="copy">
+                Subscribe to our mailing list:
+                <form action="#" method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <input type="submit" value="Submit">
+                </form>
             </div>
         </div>
 
