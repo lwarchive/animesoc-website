@@ -23,42 +23,101 @@ a {
     padding: 1vw;
     height: 15vw;
 }
+
 @media screen and (min-width: 1200px) {
     .headerbar img {
         height: 200px;
     }
 }
 
-.navigationbar {
-    z-index: 100;
-    top: 0;
-    position: sticky;
-    background-color: #f48023;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
-.navigationlink {
-    padding: 5px;
-    font-family: 'Fredoka One', cursive;
-    font-size: 5vw;
-}
 @media screen and (min-width: 800px) {
+
+    .navigationbar {
+        z-index: 100;
+        top: 0;
+        position: sticky;
+        background-color: #f48023;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
     .navigationlink {
+        padding: 5px;
+        font-family: 'Fredoka One', cursive;
         font-size: 24px;
     }
+
+    .navigationlink a {
+        color: black;
+        transition: 0.4s;
+    }
+    
+    .navigationlink a:hover {
+        color: white;
+    }
+
+    .dropdown {
+        display: none;
+    }
+
 }
 
-.navigationlink a {
-    color: black;
-    transition: 0.4s;
+@media screen and (max-width: 801px) {
+
+    .navigationbar {
+        display: none;
+    }
+
+    .navigationlink {
+        display: none;
+    }
+
+    .dropdown-container {
+        width: 35%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
+
+    .dropdown {
+        background-color: #f48023;
+        border-radius: 3px;
+        width: 5vw;
+        height: 5vw;
+        padding: 0px;
+    }
+
+    .dropdown img {
+        max-width: 63%;
+        height: auto;
+        padding: auto;
+    }
+
+    .dropdown-content {
+        display: none;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+        z-index: 20000;
+        position: sticky;
+        background-color: #f48023;
+        float: right;
+        min-width: fit-content;
+        padding: 10px;
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 20px;
+        font-family: 'Lato', sans-serif;
+        font-size: 4vw;
+    }
+
 }
 
-.navigationlink a:hover {
-    color: white;
-}
 
 .title {
     color: white;
