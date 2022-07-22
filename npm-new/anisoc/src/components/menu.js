@@ -2,7 +2,7 @@ import '../index.css';
 
 const menuitems = ["About", "Join Us", "Events", "Polls", "Gallery", "Committee"];
 
-function MenuItem(name) {
+function MenuItem(props) {
 
     const scrollto = (element) => {
         var targetPosition = document.getElementById(element);
@@ -11,8 +11,8 @@ function MenuItem(name) {
 
     return (
         <>
-            <div className="menu-item">
-                {name}
+            <div className="menu-item" onClick={scrollto}>
+                {props.name}
             </div>
         </>
     );
@@ -22,7 +22,9 @@ function Menu() {
     return (
         <>
             <div className="menu">
-                
+            {menuitems.map((item, index)=>{
+                return <MenuItem key={index} name={item} />
+            })}
             </div>
         </>
     );

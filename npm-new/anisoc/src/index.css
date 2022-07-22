@@ -1,13 +1,79 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: Verdana, sans-serif;
+  font-size: 1.2rem;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.title {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 4.5rem;
+}
+
+.subtitle {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 2.5rem;
+}
+
+.copy {
+  font-family: Verdana, sans-serif;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #F59E45;
+}
+
+.menu-item {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 2rem;
+  padding: 0.5vw;
+  cursor: pointer;
+}
+
+.menu-item:hover {
+  color: #7A3E00;
+}
+
+.home {
+  background-image: url(./static/title-background.png);
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home-title-bg {
+  background: rgba(211, 211, 211, 0.445);
+  background-blend-mode: normal;
+  -webkit-backdrop-filter: blur(7px);
+  backdrop-filter: blur(7px);
+  box-shadow: 0px 2px 4px rgba(100,100,100,0.5);
+}
+
+.home-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-title img {
+  width: 15vw;
+  padding: 2vw;
+}
+
+.home-title-copy {
+  width: 65%;
+}
+
+.home-title-copy .copy {
+  width: 75%;
+}
+
+.about {
+  background-image: url(./static/about-background.png);
+  padding: 3vw;
 }
