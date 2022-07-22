@@ -66,11 +66,7 @@ body {
 }
 
 .home-title-copy {
-  width: 65%;
-}
-
-.home-title-copy .copy {
-  width: 75%;
+  width: 50%;
 }
 
 .about {
