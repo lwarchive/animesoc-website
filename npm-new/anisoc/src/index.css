@@ -3,6 +3,7 @@ body {
   padding: 0;
   font-family: Verdana, sans-serif;
   font-size: 1.2rem;
+  scrollbar-gutter: stable;
 }
 
 .title {
@@ -71,5 +72,32 @@ body {
 
 .about {
   background-image: url(./static/about-background.png);
-  padding: 3vw;
+  padding: 4vw;
+  padding-left: 7vw;
+  padding-right: 7vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.joinus {
+  display: flex;
+  flex-direction: row;
+  padding: 4vw;
+  padding-left: 7vw;
+  padding-right: 7vw;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+}
+
+.link {
+  padding: 2vw;
+  margin: 1vw;
+}
+
+img[class='logo'] {
+  width: 140px;
 }

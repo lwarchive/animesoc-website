@@ -3,6 +3,7 @@ import './App.css';
 import Home from './components/home.js';
 import Menu from './components/menu.js';
 import About from './components/about.js';
+import JoinUs from './components/joinus';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Home />
         <Menu />
         <About />
+        <JoinUs />
       </div>
     </>
   );

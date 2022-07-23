@@ -15,7 +15,7 @@ function About() {
 
     return (
         <>
-        <div className="about">
+        <div className="about" id="About">
             <div className="title"> About </div>
             &nbsp;
             <div className="copy"> {aboutCopy} </div>
