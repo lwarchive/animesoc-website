@@ -11,6 +11,11 @@ body {
   font-size: 4.5rem;
 }
 
+a {
+  text-decoration: none;
+  color: #000;
+}
+
 .subtitle {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 2.5rem;
@@ -83,9 +88,17 @@ body {
 .joinus {
   display: flex;
   flex-direction: row;
-  padding: 4vw;
+  justify-content: center;
+  padding: 2vw;
   padding-left: 7vw;
   padding-right: 7vw;
+  background-color: #8DD5FF;
+}
+
+.joinus .title {
+  display: grid;
+  place-items: center;
+  margin-right: 5vw;
 }
 
 .links {
@@ -94,10 +107,17 @@ body {
 }
 
 .link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
   padding: 2vw;
   margin: 1vw;
+  color: white;
+  height: 9vw;
 }
 
 img[class='logo'] {
   width: 140px;
+  margin-bottom: 30px;
 }

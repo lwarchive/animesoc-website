@@ -4,6 +4,7 @@ import Home from './components/home.js';
 import Menu from './components/menu.js';
 import About from './components/about.js';
 import JoinUs from './components/joinus';
+import Events from './components/events';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Menu />
         <About />
         <JoinUs />
+        <Events />
       </div>
     </>
   );
