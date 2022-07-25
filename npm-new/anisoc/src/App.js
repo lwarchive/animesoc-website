@@ -7,6 +7,7 @@ import JoinUs from "./components/joinus";
 import Events from "./components/events";
 import Polls from "./components/polls";
 import Commitee from "./components/commitee";
+import Footer from "./components/footer.js";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Events />
         <Polls />
         <Commitee />
+        <Footer />
       </div>
     </>
   );

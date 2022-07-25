@@ -281,3 +281,14 @@ img[class="logo"] {
   padding: 1vw;
   padding-bottom: 2vw;
 }
+
+.footer {
+  background-color: #ffffff;
+  text-align: center;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+}
+
+.footer p {
+  margin: 0;
+}
