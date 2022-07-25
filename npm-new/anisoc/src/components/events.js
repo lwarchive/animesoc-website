@@ -8,28 +8,28 @@ const placeholderText =
 
 const events = [
   {
-    Title: "Event 1",
-    Date: "01/01/2020",
-    Time: "12:00",
-    Location: "Location 1",
-    Description: placeholderText,
-    Image: Event1,
+    title: "Event 1",
+    date: "01/01/2020",
+    time: "12:00",
+    location: "Location 1",
+    description: placeholderText,
+    image: Event1,
   },
   {
-    Title: "Event 2",
-    Date: "01/01/2020",
-    Time: "12:00",
-    Location: "Location 2",
-    Description: placeholderText,
-    Image: Event2,
+    title: "Event 2",
+    date: "01/01/2020",
+    time: "12:00",
+    location: "Location 2",
+    description: placeholderText,
+    image: Event2,
   },
   {
-    Title: "Event 3",
-    Date: "01/01/2020",
-    Time: "12:00",
-    Location: "Location 3",
-    Description: placeholderText,
-    Image: Event3,
+    title: "Event 3",
+    date: "01/01/2020",
+    time: "12:00",
+    location: "Location 3",
+    description: placeholderText,
+    image: Event3,
   },
 ];
 
@@ -37,16 +37,16 @@ function Event(props) {
   return (
     <>
       <div className="event">
-        <img src={props.Image} alt={props.Title} />
+        <img src={props.image} alt={props.title} />
         <div className="item-info">
           <p className="item-title">
-            {props.Title}
+            {props.title}
             <span className="item-quantum">
-              {props.Location}, {props.Date} / {props.Time}
+              {props.location}, {props.date} / {props.time}
             </span>
           </p>
 
-          <span className="item-description">{props.Description}</span>
+          <span className="item-description">{props.description}</span>
         </div>
       </div>
     </>
@@ -62,12 +62,12 @@ function Events() {
           return (
             <Event
               key={index}
-              Title={item.Title}
-              Date={item.Date}
-              Time={item.Time}
-              Location={item.Location}
-              Description={item.Description}
-              Image={item.Image}
+              title={item.title}
+              date={item.date}
+              time={item.time}
+              location={item.location}
+              description={item.description}
+              image={item.image}
             />
           );
         })}

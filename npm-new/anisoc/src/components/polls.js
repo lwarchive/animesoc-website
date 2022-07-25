@@ -5,16 +5,16 @@ const placeholderText =
 
 const polls = [
   {
-    Title: "Poll 1",
-    Description: placeholderText,
+    title: "Poll 1",
+    description: placeholderText,
   },
   {
-    Title: "Poll 2",
-    Description: placeholderText,
+    title: "Poll 2",
+    description: placeholderText,
   },
   {
-    Title: "Poll 3",
-    Description: placeholderText,
+    title: "Poll 3",
+    description: placeholderText,
   },
 ];
 
@@ -22,8 +22,8 @@ function Poll(props) {
   return (
     <>
       <div className="poll">
-        <p className="item-title">{props.Title}</p>
-        <p className="item-description">{props.Description}</p>
+        <p className="item-title">{props.title}</p>
+        <p className="item-description">{props.description}</p>
         <a href="#" className="item-button">
           Vote Here
         </a>
@@ -43,8 +43,8 @@ function Polls() {
           return (
             <Poll
               key={index}
-              Title={item.Title}
-              Description={item.Description}
+              title={item.title}
+              description={item.description}
             />
           );
         })}

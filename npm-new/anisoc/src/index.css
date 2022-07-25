@@ -85,7 +85,7 @@ a {
   justify-content: center;
 }
 
-.joinus {
+.join-us {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -95,7 +95,7 @@ a {
   background-color: #8dd5ff;
 }
 
-.joinus .title {
+.join-us .title {
   display: grid;
   place-items: center;
   margin-right: 5vw;
