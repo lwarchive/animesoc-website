@@ -22,9 +22,9 @@ function Poll(props) {
   return (
     <>
       <div className="poll">
-        <p className="event-title">{props.Title}</p>
-        <p className="event-description">{props.Description}</p>
-        <a href="#" className="event-button">
+        <p className="item-title">{props.Title}</p>
+        <p className="item-description">{props.Description}</p>
+        <a href="#" className="item-button">
           Vote Here
         </a>
       </div>

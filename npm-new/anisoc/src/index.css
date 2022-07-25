@@ -138,19 +138,19 @@ img[class="logo"] {
   padding-bottom: 2vw;
 }
 
-.event-info {
+.item-info {
   width: 100%;
   background-color: #f59e45;
   padding-left: 2vw;
   padding-right: 2vw;
 }
 
-.event-title {
+.item-title {
   font-size: 2rem;
   font-weight: bold;
 }
 
-.event-quantum {
+.item-quantum {
   font-size: 1.75rem;
   font-weight: normal;
   float: right;
@@ -187,17 +187,17 @@ img[class="logo"] {
   background-color: rgba(255, 255, 255, 0.75);
 }
 
-.poll .event-title {
+.poll .item-title {
   padding-left: 2vw;
   padding-right: 2vw;
 }
 
-.poll .event-description {
+.poll .item-description {
   padding-left: 2vw;
   padding-right: 2vw;
 }
 
-.poll .event-button {
+.poll .item-button {
   background-color: #f3f986;
   border: none;
   color: #000000;
@@ -264,18 +264,18 @@ img[class="logo"] {
   margin: 0;
 }
 
-.committee-member-info .event-title {
+.committee-member-info .item-title {
   font-size: 2.5rem;
   font-weight: bold;
   padding-top: 1vw;
 }
 
-.committee-member-info .event-subtitle {
+.committee-member-info .item-subtitle {
   font-size: 1.8rem;
   font-weight: normal;
 }
 
-.committee-member-info .event-description {
+.committee-member-info .item-description {
   font-size: 1rem;
   font-weight: normal;
   padding: 1vw;

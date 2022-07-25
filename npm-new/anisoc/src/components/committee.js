@@ -31,9 +31,9 @@ function CommitteeMember(props) {
       <div className="committee-member">
         <img src={props.portrait} alt={props.name} />
         <div className="committee-member-info">
-          <p className="event-title">{props.name}</p>
-          <p className="event-subtitle">{props.role}</p>
-          <p className="event-description">{props.description}</p>
+          <p className="item-title">{props.name}</p>
+          <p className="item-subtitle">{props.role}</p>
+          <p className="item-description">{props.description}</p>
         </div>
       </div>
     </>

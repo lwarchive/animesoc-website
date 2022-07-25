@@ -38,15 +38,15 @@ function Event(props) {
     <>
       <div className="event">
         <img src={props.Image} alt={props.Title} />
-        <div className="event-info">
-          <p className="event-title">
+        <div className="item-info">
+          <p className="item-title">
             {props.Title}
-            <span className="event-quantum">
+            <span className="item-quantum">
               {props.Location}, {props.Date} / {props.Time}
             </span>
           </p>
 
-          <span className="event-description">{props.Description}</span>
+          <span className="item-description">{props.Description}</span>
         </div>
       </div>
     </>
