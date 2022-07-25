@@ -25,12 +25,12 @@ const members = [
   },
 ];
 
-function CommiteeMember(props) {
+function CommitteeMember(props) {
   return (
     <>
-      <div className="commitee-member">
+      <div className="committee-member">
         <img src={props.portrait} alt={props.name} />
-        <div className="commitee-member-info">
+        <div className="committee-member-info">
           <p className="event-title">{props.name}</p>
           <p className="event-subtitle">{props.role}</p>
           <p className="event-description">{props.description}</p>
@@ -40,14 +40,14 @@ function CommiteeMember(props) {
   );
 }
 
-function Commitee() {
+function Committee() {
   return (
-    <div className="commitee-members" id="CommiteeMembers">
-      <div className="title"> Commitee </div>
-      <div className="commitee-container">
+    <div className="committee-members" id="CommitteeMembers">
+      <div className="title"> Committee </div>
+      <div className="committee-container">
         {members.map((item, index) => {
           return (
-            <CommiteeMember
+            <CommitteeMember
               key={index}
               name={item.name}
               role={item.role}
@@ -61,4 +61,4 @@ function Commitee() {
   );
 }
 
-export default Commitee;
+export default Committee;

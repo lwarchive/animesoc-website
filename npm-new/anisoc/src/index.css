@@ -213,7 +213,7 @@ img[class="logo"] {
   padding-bottom: 1.2vw;
 }
 
-.commitee-members {
+.committee-members {
   background-image: url(./static/committee-background.png);
   padding: 4vw;
   padding-left: 7vw;
@@ -224,17 +224,17 @@ img[class="logo"] {
   justify-content: center;
 }
 
-.commitee-members .title {
+.committee-members .title {
   text-align: center;
   padding-top: 2vw;
   background-color: rgba(255, 255, 255, 0.5);
 }
 
-.commitee-members .member {
+.committee-members .member {
   flex-direction: row;
 }
 
-.commitee-container {
+.committee-container {
   background-color: rgba(255, 255, 255, 0.5);
   display: flex;
   flex-direction: row;
@@ -245,37 +245,37 @@ img[class="logo"] {
   padding-right: 7vw;
 }
 
-.commitee-member .commitee-member-info {
+.committee-member .committee-member-info {
   background-color: #5d5d5d;
   color: #ffffff;
   text-align: center;
 }
 
-.commitee-member {
+.committee-member {
   margin: 3vw;
 }
 
-.commitee-member img {
+.committee-member img {
   display: block;
   width: 100%;
 }
 
-.commitee-member-info p {
+.committee-member-info p {
   margin: 0;
 }
 
-.commitee-member-info .event-title {
+.committee-member-info .event-title {
   font-size: 2.5rem;
   font-weight: bold;
   padding-top: 1vw;
 }
 
-.commitee-member-info .event-subtitle {
+.committee-member-info .event-subtitle {
   font-size: 1.8rem;
   font-weight: normal;
 }
 
-.commitee-member-info .event-description {
+.committee-member-info .event-description {
   font-size: 1rem;
   font-weight: normal;
   padding: 1vw;

@@ -6,7 +6,7 @@ import About from "./components/about.js";
 import JoinUs from "./components/joinus";
 import Events from "./components/events";
 import Polls from "./components/polls";
-import Commitee from "./components/commitee";
+import Committee from "./components/committee";
 import Footer from "./components/footer.js";
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
         <JoinUs />
         <Events />
         <Polls />
-        <Commitee />
+        <Committee />
         <Footer />
       </div>
     </>
