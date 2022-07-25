@@ -1,13 +1,13 @@
 import "./App.css";
 
-import Home from "./components/home.js";
-import Menu from "./components/menu.js";
-import About from "./components/about.js";
-import JoinUs from "./components/joinus";
+import Home from "./components/home";
+import Menu from "./components/menu";
+import About from "./components/about";
+import JoinUs from "./components/join-us";
 import Events from "./components/events";
 import Polls from "./components/polls";
 import Committee from "./components/committee";
-import Footer from "./components/footer.js";
+import Footer from "./components/footer";
 
 function App() {
   return (
