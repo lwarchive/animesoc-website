@@ -212,3 +212,72 @@ img[class="logo"] {
   padding: 1vw 2vw;
   padding-bottom: 1.2vw;
 }
+
+.commitee-members {
+  background-image: url(./static/committee-background.png);
+  padding: 4vw;
+  padding-left: 7vw;
+  padding-right: 7vw;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.commitee-members .title {
+  text-align: center;
+  padding-top: 2vw;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.commitee-members .member {
+  flex-direction: row;
+}
+
+.commitee-container {
+  background-color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 2vw;
+  padding-top: 0;
+  padding-left: 7vw;
+  padding-right: 7vw;
+}
+
+.commitee-member .commitee-member-info {
+  background-color: #5d5d5d;
+  color: #ffffff;
+  text-align: center;
+}
+
+.commitee-member {
+  margin: 3vw;
+}
+
+.commitee-member img {
+  display: block;
+  width: 100%;
+}
+
+.commitee-member-info p {
+  margin: 0;
+}
+
+.commitee-member-info .event-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  padding-top: 1vw;
+}
+
+.commitee-member-info .event-subtitle {
+  font-size: 1.8rem;
+  font-weight: normal;
+}
+
+.commitee-member-info .event-description {
+  font-size: 1rem;
+  font-weight: normal;
+  padding: 1vw;
+  padding-bottom: 2vw;
+}
