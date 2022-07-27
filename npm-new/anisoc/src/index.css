@@ -292,3 +292,8 @@ img[class="logo"] {
 .footer p {
   margin: 0;
 }
+
+.footer a {
+  text-decoration: underline;
+  color: #f59e45;
+}
