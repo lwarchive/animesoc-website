@@ -32,12 +32,23 @@ function Index() {
   );
 }
 
+function Admin() {
+  return (
+    <>
+      <div className="App">
+        "Admin Page"
+      </div>
+    </>
+  )
+}
+
 function App() {
   return (
     <>
       <BrowserRouter>
         <Routes>
           <Route exact path="" element={<Index />} />
+          <Route path="admin" element={<Admin />} />
         </Routes>
       </BrowserRouter>
     </>
