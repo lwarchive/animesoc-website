@@ -1,4 +1,10 @@
 import "./App.css";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
 
 import Home from "./components/home";
 import Menu from "./components/menu";
@@ -9,7 +15,7 @@ import Polls from "./components/polls";
 import Committee from "./components/committee";
 import Footer from "./components/footer";
 
-function App() {
+function Index() {
   return (
     <>
       <div className="App">
@@ -22,6 +28,18 @@ function App() {
         <Committee />
         <Footer />
       </div>
+    </>
+  );
+}
+
+function App() {
+  return (
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route exact path="" element={<Index />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
