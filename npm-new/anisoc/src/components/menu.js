@@ -2,6 +2,8 @@ import '../index.css';
 
 const menuitems = ["About", "Join Us", "Events", "Polls", "Gallery", "Committee"];
 
+//TODO: make scrolling buttons work
+
 function MenuItem(props) {
 
     const scrollto = (element) => {

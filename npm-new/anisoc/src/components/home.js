@@ -1,7 +1,7 @@
 import '../index.css';
 
 //TODO: fetch from api
-const titleCopy = "We are the Anime & Manga Society. \nWe're a friendly, open, and inclusive society, who gather weekly to watch Japanese animation (also known as anime) and discuss our interests in manga. \nOur main weekly activities consist of watching anime and other associated media together.";
+const titleCopy = require('../json/home.json');
 
 function Home() {
 
@@ -14,7 +14,7 @@ function Home() {
                         <div className="home-title-copy">
                             <div className="subtitle"> Royal Holloway, University of London </div>
                             <div className="title"> Anime &amp; Manga Society </div>
-                            <div className="copy"> {titleCopy} </div>
+                            <div className="copy"> {titleCopy.desc} </div>
                         </div>
                 </div>
             </div>

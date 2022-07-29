@@ -1,34 +1,6 @@
 import "../index.css";
 
-const placeholderText =
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum egestas neque at justo tincidunt egestas. Integer mauris diam, fringilla eget gravida condimentum, lacinia ut justo. Proin cursus dolor a laoreet luctus. Vestibulum vitae feugiat quam, condimentum dictum eros. Morbi eleifend lorem sit amet bibendum dignissim. ";
-
-const events = [
-  {
-    title: "Event 1",
-    date: "01/01/2020",
-    time: "12:00",
-    location: "Location 1",
-    description: placeholderText,
-    image: "static/events/event1.png",
-  },
-  {
-    title: "Event 2",
-    date: "01/01/2020",
-    time: "12:00",
-    location: "Location 2",
-    description: placeholderText,
-    image: "static/events/event2.png",
-  },
-  {
-    title: "Event 3",
-    date: "01/01/2020",
-    time: "12:00",
-    location: "Location 3",
-    description: placeholderText,
-    image: "static/events/event2.png",
-  },
-];
+const events = require('../json/events.json');
 
 function Event(props) {
   return (

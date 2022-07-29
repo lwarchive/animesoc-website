@@ -1,22 +1,6 @@
 import "../index.css";
 
-const placeholderText =
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum egestas neque at justo tincidunt egestas. Integer mauris diam, fringilla eget gravida condimentum, lacinia ut justo. Proin cursus dolor a laoreet luctus. Vestibulum vitae feugiat quam, condimentum dictum eros. Morbi eleifend lorem sit amet bibendum dignissim. ";
-
-const polls = [
-  {
-    title: "Poll 1",
-    description: placeholderText,
-  },
-  {
-    title: "Poll 2",
-    description: placeholderText,
-  },
-  {
-    title: "Poll 3",
-    description: placeholderText,
-  },
-];
+const polls = require('../json/polls.json');
 
 function Poll(props) {
   return (
