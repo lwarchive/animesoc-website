@@ -1,3 +1,4 @@
+
 body {
   margin: 0;
   padding: 0;
@@ -44,7 +45,7 @@ a {
 }
 
 .home {
-  background-image: url(./static/title-background.png);
+  background-image: url("../public/static/title-background.png");
   height: 95vh;
   display: flex;
   flex-direction: column;
@@ -76,7 +77,7 @@ a {
 }
 
 .about {
-  background-image: url(./static/about-background.png);
+  background-image: url("../public/static/about-background.png");
   padding: 4vw;
   padding-left: 7vw;
   padding-right: 7vw;
@@ -162,7 +163,7 @@ img[class="logo"] {
 }
 
 .polls {
-  background-image: url(./static/polls-background.png);
+  background-image: url("../public/static/polls-background.png");
   padding: 4vw;
   padding-left: 7vw;
   padding-right: 7vw;
@@ -214,7 +215,7 @@ img[class="logo"] {
 }
 
 .committee-members {
-  background-image: url(./static/committee-background.png);
+  background-image: url("../public/static/committee-background.png");
   padding: 4vw;
   padding-left: 7vw;
   padding-right: 7vw;

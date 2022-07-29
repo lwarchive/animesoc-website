@@ -1,33 +1,28 @@
 import "../index.css";
 
-import RHSU from "../static/rhsu-logo.png";
-import Discord from "../static/discord-logo.png";
-import Facebook from "../static/facebook-logo.png";
-import Instagram from "../static/instagram-logo.png";
-
 const links = [
   {
     text: "Membership",
     link: "https://www.su.rhul.ac.uk/societies/a-z/animeandmanga/",
-    icon: RHSU,
+    icon: "/static/rhsu-logo.png",
     colour: "#F59E45",
   },
   {
     text: "Discord",
     link: "https://rhulani.me/discord",
-    icon: Discord,
+    icon: "/static/discord-logo.png",
     colour: "#646673",
   },
   {
     text: "Facebook",
     link: "https://www.facebook.com/groups/animemangarhul",
-    icon: Facebook,
+    icon: "/static/facebook-logo.png",
     colour: "#16356C",
   },
   {
     text: "Instagram",
     link: "https://www.instagram.com/rhulanime/",
-    icon: Instagram,
+    icon: "/static/instagram-logo.png",
     colour: "#784784",
   },
 ]; //TODO: fetch from api

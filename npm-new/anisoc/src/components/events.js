@@ -1,7 +1,4 @@
 import "../index.css";
-import Event1 from "../static/events/event1.png";
-import Event2 from "../static/events/event2.png";
-import Event3 from "../static/events/event3.png";
 
 const placeholderText =
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum egestas neque at justo tincidunt egestas. Integer mauris diam, fringilla eget gravida condimentum, lacinia ut justo. Proin cursus dolor a laoreet luctus. Vestibulum vitae feugiat quam, condimentum dictum eros. Morbi eleifend lorem sit amet bibendum dignissim. ";
@@ -13,7 +10,7 @@ const events = [
     time: "12:00",
     location: "Location 1",
     description: placeholderText,
-    image: Event1,
+    image: "static/events/event1.png",
   },
   {
     title: "Event 2",
@@ -21,7 +18,7 @@ const events = [
     time: "12:00",
     location: "Location 2",
     description: placeholderText,
-    image: Event2,
+    image: "static/events/event2.png",
   },
   {
     title: "Event 3",
@@ -29,7 +26,7 @@ const events = [
     time: "12:00",
     location: "Location 3",
     description: placeholderText,
-    image: Event3,
+    image: "static/events/event2.png",
   },
 ];
 
