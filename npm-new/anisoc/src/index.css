@@ -143,21 +143,15 @@ a {
   padding: 4vw;
   padding-left: 7vw;
   padding-right: 7vw;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
   justify-content: center;
 }
 
 .polls-container {
   justify-content: center;
   padding: 2vw;
-  padding-left: 7vw;
-  padding-right: 7vw;
 }
 
 .poll {
-  margin: 3vw;
   background-color: rgba(255, 255, 255, 0.75);
 }
 
@@ -257,4 +251,8 @@ a {
 .footer a {
   text-decoration: underline;
   color: #f59e45;
+}
+
+.floating-menu {
+  z-index: 999999999;
 }
