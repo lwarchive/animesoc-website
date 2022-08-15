@@ -1,27 +1,27 @@
-import "../index.css";  
+import "../index.css";
 
-const members = require('../json/committee.json');
+const members = require("../json/committee.json");
 
 function CommitteeMember(props) {
   return (
     <>
-      <div className="committee-member">
+      <div className="committee-member max-w-sm">
         <img src={`${props.portrait}`} alt={props.name} />
         <div className="committee-member-info">
           <p className="item-title">{props.name}</p>
           <p className="item-subtitle">{props.role}</p>
           <p className="item-description">{props.description}</p>
         </div>
-      </div>  
+      </div>
     </>
   );
 }
 
 function Committee() {
   return (
-    <div className="committee-members" id="CommitteeMembers">
+    <div className="committee-members flex flex-col" id="CommitteeMembers">
       <div className="title"> Committee </div>
-      <div className="committee-container">
+      <div className="committee-container flex flex-col lg:flex-row">
         {members.map((item, index) => {
           return (
             <CommitteeMember
