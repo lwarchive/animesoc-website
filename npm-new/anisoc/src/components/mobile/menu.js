@@ -48,7 +48,9 @@ function MobileMenu() {
       <button
         onClick={() => setOpen(!open)}
         title="Menu"
-        class="lg:-scale-x-0 lg:-scale-y-0 scale-x-100 scale-y-100 fixed z-90 bottom-10 right-8 mobile-menu w-20 h-20 rounded drop-shadow-lg flex justify-center items-center transition-all text-white text-4xl hover:bg-orange-700"
+        className={`lg:-scale-x-0 lg:-scale-y-0 scale-x-100 scale-y-100 fixed floating-menu bottom-10 right-8 mobile-menu w-20 h-20 rounded drop-shadow-lg flex justify-center items-center transition-all text-white text-4xl hover:bg-orange-700 origin-bottom-right duration-150 ${
+          !open ? "scale-y-100 scale-x-100" : "-scale-y-0 -scale-x-0"
+        }`}
       >
         <div class="space-y-2">
           <div class="w-8 h-0.5 bg-black"></div>
@@ -57,7 +59,7 @@ function MobileMenu() {
         </div>
       </button>
       <div
-        className={`mobile-menu lg:invisible fixed z-90 bottom-10 right-8 grid grid-cols-3 gap-3 rounded items-center p-6 drop-shadow-lg ${
+        className={`mobile-menu lg:invisible fixed floating-menu bottom-10 right-8 grid grid-cols-3 gap-3 rounded items-center p-6 drop-shadow-lg ${
           open ? "scale-y-100 scale-x-100" : "-scale-y-0 -scale-x-0"
         } duration-150 origin-bottom-right transition-all`}
       >
