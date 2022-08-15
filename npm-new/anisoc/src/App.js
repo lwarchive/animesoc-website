@@ -1,13 +1,10 @@
 import "./App.css";
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-  Link
-} from "react-router-dom";
+import { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Home from "./components/home";
 import Menu from "./components/menu";
+import { MobileMenu, MobileMenuButton } from "./components/mobile/menu";
 import About from "./components/about";
 import JoinUs from "./components/join-us";
 import Events from "./components/events";
@@ -16,11 +13,26 @@ import Committee from "./components/committee";
 import Footer from "./components/footer";
 
 function Index() {
+  const [open, setOpen] = useState(false);
+
   return (
     <>
       <div className="App">
         <Home />
         <Menu />
+        {open ? (
+          <MobileMenu
+            toggleMenu={() => {
+              setOpen(false);
+            }}
+          />
+        ) : (
+          <MobileMenuButton
+            toggleMenu={() => {
+              setOpen(true);
+            }}
+          />
+        )}
         <About />
         <JoinUs />
         <Events />
@@ -35,11 +47,9 @@ function Index() {
 function Admin() {
   return (
     <>
-      <div className="App">
-        "Admin Page"
-      </div>
+      <div className="App">"Admin Page"</div>
     </>
-  )
+  );
 }
 
 function App() {
