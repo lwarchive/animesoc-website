@@ -117,21 +117,6 @@ a {
   padding-right: 7vw;
 }
 
-.events .title {
-  text-align: right;
-  padding-bottom: 2vw;
-}
-
-.event {
-  display: flex;
-  padding-bottom: 2vw;
-}
-
-.event img {
-  width: 9vw;
-  height: 9vw;
-}
-
 .item-info {
   width: 100%;
   background-color: #f59e45;
@@ -142,12 +127,6 @@ a {
 .item-title {
   font-size: 2rem;
   font-weight: bold;
-}
-
-.item-quantum {
-  font-size: 1.75rem;
-  font-weight: normal;
-  float: right;
 }
 
 .flex-break {
