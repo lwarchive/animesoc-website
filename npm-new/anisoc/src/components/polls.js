@@ -5,7 +5,7 @@ const polls = require("../json/polls.json");
 function Poll(props) {
   return (
     <>
-      <div className="poll w-full lg:w-1/2 ">
+      <div className="poll w-full backdrop-blur-sm rounded-sm lg:w-1/2 ">
         <p className="item-title mt-4">{props.title}</p>
         <p className="item-description">{props.description}</p>
         <div className="flex justify-center">

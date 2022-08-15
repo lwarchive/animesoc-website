@@ -19,20 +19,22 @@ function CommitteeMember(props) {
 
 function Committee() {
   return (
-    <div className="committee-members flex flex-col" id="CommitteeMembers">
-      <div className="title"> Committee </div>
-      <div className="committee-container flex flex-col lg:flex-row">
-        {members.map((item, index) => {
-          return (
-            <CommitteeMember
-              key={index}
-              name={item.name}
-              role={item.role}
-              portrait={item.portrait}
-              description={item.description}
-            />
-          );
-        })}
+    <div className="committee-members flex flex-col " id="CommitteeMembers">
+      <div className="backdrop-blur-sm rounded-sm">
+        <div className="title "> Committee </div>
+        <div className="committee-container flex flex-col lg:flex-row">
+          {members.map((item, index) => {
+            return (
+              <CommitteeMember
+                key={index}
+                name={item.name}
+                role={item.role}
+                portrait={item.portrait}
+                description={item.description}
+              />
+            );
+          })}
+        </div>
       </div>
     </div>
   );
