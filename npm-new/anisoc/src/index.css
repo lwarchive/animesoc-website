@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
   padding: 0;
@@ -41,6 +45,16 @@ a {
 
 .menu-item:hover {
   color: #7a3e00;
+}
+
+.mobile-menu {
+  background-color: #f59e45;
+}
+
+.mobile-menu-item {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
 }
 
 .home {
@@ -161,7 +175,8 @@ img[class="logo"] {
   float: right;
 }
 
-.item-description {}
+.item-description {
+}
 
 .flex-break {
   flex-basis: 100%;

@@ -1,13 +1,9 @@
 import "./App.css";
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-  Link
-} from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Home from "./components/home";
 import Menu from "./components/menu";
+import MobileMenu from "./components/mobile/menu";
 import About from "./components/about";
 import JoinUs from "./components/join-us";
 import Events from "./components/events";
@@ -21,6 +17,7 @@ function Index() {
       <div className="App">
         <Home />
         <Menu />
+        <MobileMenu />
         <About />
         <JoinUs />
         <Events />
@@ -49,10 +46,9 @@ function Admin() {
         <Admin label="polls" />
         <Committee />
         <Admin label="committee" />
-
       </div>
     </>
-  )
+  );
 }
 
 function App() {
