@@ -32,7 +32,21 @@ function Index() {
 function Admin() {
   return (
     <>
-      <div className="App">"Admin Page"</div>
+      <div className="App">
+        "Admin Page"
+        <Home />
+        <Admin label="home" />
+        <About />
+        <Admin label="about" />
+        <JoinUs />
+        <Admin label="join-us" />
+        <Events />
+        <Admin label="events" />
+        <Polls />
+        <Admin label="polls" />
+        <Committee />
+        <Admin label="committee" />
+      </div>
     </>
   );
 }
