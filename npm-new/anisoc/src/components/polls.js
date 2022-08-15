@@ -1,6 +1,6 @@
 import "../index.css";
 
-const polls = require('../json/polls.json');
+const polls = require("../json/polls.json");
 
 function Poll(props) {
   return (
@@ -8,9 +8,7 @@ function Poll(props) {
       <div className="poll">
         <p className="item-title">{props.title}</p>
         <p className="item-description">{props.description}</p>
-        <a href="#" className="item-button">
-          Vote Here
-        </a>
+        <button className="item-button">Vote Here</button>
       </div>
     </>
   );
