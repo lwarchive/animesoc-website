@@ -47,9 +47,9 @@ function MobileMenuButton(props) {
         class="fixed z-90 bottom-10 right-8 mobile-menu w-20 h-20 rounded drop-shadow-lg flex justify-center items-center transition-colors text-white text-4xl hover:bg-orange-700"
       >
         <div class="space-y-2">
-          <div class="w-8 h-0.5 bg-white"></div>
-          <div class="w-8 h-0.5 bg-white"></div>
-          <div class="w-8 h-0.5 bg-white"></div>
+          <div class="w-8 h-0.5 bg-black"></div>
+          <div class="w-8 h-0.5 bg-black"></div>
+          <div class="w-8 h-0.5 bg-black"></div>
         </div>
       </button>
     </>
