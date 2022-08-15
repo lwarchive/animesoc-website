@@ -90,8 +90,6 @@ a {
 }
 
 .join-us {
-  display: flex;
-  flex-direction: row;
   justify-content: center;
   padding: 2vw;
   padding-left: 7vw;
@@ -105,25 +103,12 @@ a {
   margin-right: 5vw;
 }
 
-.links {
-  display: flex;
-  flex-direction: row;
-}
-
 .link {
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   text-align: center;
   padding: 2vw;
   margin: 1vw;
   color: white;
-  height: 9vw;
-}
-
-img[class="logo"] {
-  width: 140px;
-  margin-bottom: 30px;
 }
 
 .events {

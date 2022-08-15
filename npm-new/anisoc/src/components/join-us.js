@@ -1,14 +1,17 @@
 import "../index.css";
 
-const links = require('../json/join-us.json'); //TODO: fetch from api
+const links = require("../json/join-us.json"); //TODO: fetch from api
 
 function Link(props) {
   return (
     <>
       <a href={props.link}>
-        <div className="link" style={{ backgroundColor: props.colour }}>
-          <img src={props.icon} alt={props.text} className="logo" />
-          {props.text}
+        <div
+          className="link flex flex-col items-center lg:h-full "
+          style={{ backgroundColor: props.colour }}
+        >
+          <img src={props.icon} alt={props.text} className="logo w-10" />
+          <span className="block">{props.text}</span>
         </div>
       </a>
     </>
@@ -18,10 +21,10 @@ function Link(props) {
 function JoinUs() {
   return (
     <>
-      <div className="join-us" id="Join Us">
+      <div className="join-us flex flex-col lg:flex-row" id="Join Us">
         <div className="title"> Join Us </div>
         &nbsp;
-        <div className="links">
+        <div className="flex flex-col lg:flex-row lg:grid lg:grid-cols-4 lg:gap-3">
           {links.map((item, index) => {
             return (
               <Link
