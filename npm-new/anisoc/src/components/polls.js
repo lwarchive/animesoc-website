@@ -8,7 +8,9 @@ function Poll(props) {
       <div className="poll w-full lg:w-1/2 ">
         <p className="item-title mt-4">{props.title}</p>
         <p className="item-description">{props.description}</p>
-        <button className="item-button mt-4">Vote Here</button>
+        <div className="flex justify-center">
+          <button className="item-button mt-4">Vote Here</button>
+        </div>
       </div>
     </>
   );
