@@ -1,5 +1,7 @@
 import "../../index.css";
 
+import { useState } from "react";
+
 import PersonIcon from "@mui/icons-material/Person";
 import GroupsIcon from "@mui/icons-material/Groups";
 import GroupAddIcon from "@mui/icons-material/GroupAdd";
@@ -38,11 +40,14 @@ function MenuItem(props) {
   );
 }
 
-function MobileMenuButton(props) {
+function MobileMenu() {
+  const [open, setOpen] = useState(false);
+
   return (
     <>
+      {" "}
       <button
-        onClick={props.toggleMenu}
+        onClick={() => setOpen(!open)}
         title="Menu"
         class="fixed z-90 bottom-10 right-8 mobile-menu w-20 h-20 rounded drop-shadow-lg flex justify-center items-center transition-colors text-white text-4xl hover:bg-orange-700"
       >
@@ -52,20 +57,17 @@ function MobileMenuButton(props) {
           <div class="w-8 h-0.5 bg-black"></div>
         </div>
       </button>
-    </>
-  );
-}
-
-function MobileMenu(props) {
-  return (
-    <>
-      <div class="mobile-menu fixed z-90 bottom-10 right-8 grid grid-cols-3 gap-3 rounded items-center p-6 drop-shadow-lg">
+      <div
+        className={`mobile-menu fixed z-90 bottom-10 right-8 grid grid-cols-3 gap-3 rounded items-center p-6 drop-shadow-lg ${
+          open ? "scale-y-100 scale-x-100" : "-scale-y-0 -scale-x-0"
+        } duration-150 origin-bottom-right transition-all`}
+      >
         {menuItems.map((item, index) => {
           return <MenuItem key={index} menuItem={item} />;
         })}
         <div
           className="mobile-menu-item flex flex-col items-center col-start-3"
-          onClick={props.toggleMenu}
+          onClick={() => setOpen(!open)}
         >
           <CloseIcon />
           <span className="block">Close</span>
@@ -75,4 +77,4 @@ function MobileMenu(props) {
   );
 }
 
-export { MobileMenu, MobileMenuButton };
+export default MobileMenu;
