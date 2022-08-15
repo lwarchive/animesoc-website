@@ -19,7 +19,9 @@ function Poll(props) {
 function Polls() {
   return (
     <div className="polls bg-cover bg-center" id="Polls">
-      <div className="title"> Polls </div>
+      <div className="title text-center text-white md:text-left md:text-black transition-all duration-300">
+        Polls
+      </div>
       <div className="polls-container flex flex-col w-full lg:flex-row rounded">
         {polls.map((item, index) => {
           if (index > 1) return <></>;
