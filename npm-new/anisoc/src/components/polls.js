@@ -9,7 +9,9 @@ function Poll(props) {
         <p className="item-title mt-4">{props.title}</p>
         <p className="item-description">{props.description}</p>
         <div className="flex justify-center">
-          <button className="item-button mt-4">Vote Here</button>
+          <button className="item-button mt-4 rounded-sm text-2xl">
+            Vote Here
+          </button>
         </div>
       </div>
     </>

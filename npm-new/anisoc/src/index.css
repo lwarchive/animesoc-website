@@ -129,6 +129,7 @@ a {
 }
 
 .item-title {
+  font-family: "Josefin Sans", sans-serif;
   font-size: 2rem;
   font-weight: bold;
 }
@@ -166,6 +167,7 @@ a {
 }
 
 .poll .item-button {
+  font-family: "Josefin Sans", sans-serif;
   background-color: #f3f986;
   border: none;
   color: #000000;
@@ -175,8 +177,8 @@ a {
 
   margin-bottom: 5%;
 
-  padding: 1vw 2vw;
-  padding-bottom: 1.2vw;
+  padding: 4vw 6vw;
+  padding-bottom: 4vw;
 }
 
 .committee-members {
