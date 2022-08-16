@@ -59,6 +59,7 @@ a {
 
 .home {
   background-image: url(../public/static/title-background.png);
+  font-family: "Josefin Sans", sans-serif;
   height: 95vh;
   display: flex;
   flex-direction: column;
@@ -74,19 +75,8 @@ a {
 }
 
 .home-title {
-  display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
-}
-
-.home-title img {
-  width: 15vw;
-  padding: 2vw;
-}
-
-.home-title-copy {
-  width: 50%;
 }
 
 .about {
@@ -100,8 +90,6 @@ a {
 }
 
 .join-us {
-  display: flex;
-  flex-direction: row;
   justify-content: center;
   padding: 2vw;
   padding-left: 7vw;
@@ -115,25 +103,12 @@ a {
   margin-right: 5vw;
 }
 
-.links {
-  display: flex;
-  flex-direction: row;
-}
-
 .link {
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   text-align: center;
   padding: 2vw;
   margin: 1vw;
   color: white;
-  height: 9vw;
-}
-
-img[class="logo"] {
-  width: 140px;
-  margin-bottom: 30px;
 }
 
 .events {
@@ -143,18 +118,7 @@ img[class="logo"] {
 }
 
 .events .title {
-  text-align: right;
   padding-bottom: 2vw;
-}
-
-.event {
-  display: flex;
-  padding-bottom: 2vw;
-}
-
-.event img {
-  width: 9vw;
-  height: 9vw;
 }
 
 .item-info {
@@ -165,17 +129,9 @@ img[class="logo"] {
 }
 
 .item-title {
+  font-family: "Josefin Sans", sans-serif;
   font-size: 2rem;
   font-weight: bold;
-}
-
-.item-quantum {
-  font-size: 1.75rem;
-  font-weight: normal;
-  float: right;
-}
-
-.item-description {
 }
 
 .flex-break {
@@ -188,24 +144,15 @@ img[class="logo"] {
   padding: 4vw;
   padding-left: 7vw;
   padding-right: 7vw;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
   justify-content: center;
 }
 
 .polls-container {
-  display: flex;
-  flex-direction: row;
   justify-content: center;
   padding: 2vw;
-  padding-left: 7vw;
-  padding-right: 7vw;
 }
 
 .poll {
-  width: 50%;
-  margin: 3vw;
   background-color: rgba(255, 255, 255, 0.75);
 }
 
@@ -220,6 +167,7 @@ img[class="logo"] {
 }
 
 .poll .item-button {
+  font-family: "Josefin Sans", sans-serif;
   background-color: #f3f986;
   border: none;
   color: #000000;
@@ -227,12 +175,10 @@ img[class="logo"] {
   text-align: center;
   font-size: 2rem;
 
-  margin-left: 25%;
-  margin-right: 25%;
   margin-bottom: 5%;
 
-  padding: 1vw 2vw;
-  padding-bottom: 1.2vw;
+  padding: 2vw 4vw;
+  padding-bottom: 2vw;
 }
 
 .committee-members {
@@ -240,10 +186,7 @@ img[class="logo"] {
   padding: 4vw;
   padding-left: 7vw;
   padding-right: 7vw;
-  display: flex;
-  flex-direction: column;
   flex-grow: 1;
-  justify-content: center;
 }
 
 .committee-members .title {
@@ -252,19 +195,11 @@ img[class="logo"] {
   background-color: rgba(255, 255, 255, 0.5);
 }
 
-.committee-members .member {
-  flex-direction: row;
-}
-
 .committee-container {
   background-color: rgba(255, 255, 255, 0.5);
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
   padding: 2vw;
   padding-top: 0;
-  padding-left: 7vw;
-  padding-right: 7vw;
+  align-items: center;
 }
 
 .committee-member .committee-member-info {
@@ -318,4 +253,8 @@ img[class="logo"] {
 .footer a {
   text-decoration: underline;
   color: #f59e45;
+}
+
+.floating-menu {
+  z-index: 999999999;
 }

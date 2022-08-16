@@ -19,10 +19,7 @@ function MenuItem(props) {
 
   return (
     <>
-      <div
-        className="menu-item invisible lg:visible transition-all duration-200"
-        onClick={scrollto}
-      >
+      <div className="menu-item" onClick={scrollto}>
         {props.name}
       </div>
     </>
@@ -32,7 +29,7 @@ function MenuItem(props) {
 function Menu() {
   return (
     <>
-      <div className="menu">
+      <div className="menu -scale-y-0 lg:visible lg:scale-100 transition-all duration-200 origin-top">
         {menuitems.map((item, index) => {
           return <MenuItem key={index} name={item} />;
         })}
