@@ -26,15 +26,14 @@ function Polls() {
       </div>
       <div className="polls-container flex flex-col w-full justify-center lg:flex-row rounded">
         {polls.map((item, index) => {
-          if (index > 1) return <></>;
-
-          return (
-            <Poll
-              key={index}
-              title={item.title}
-              description={item.description}
-            />
-          );
+          if (index < 2)
+            return (
+              <Poll
+                key={index}
+                title={item.title}
+                description={item.description}
+              />
+            );
         })}
       </div>
       {polls.length > 2 ? (

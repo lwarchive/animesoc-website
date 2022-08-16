@@ -52,10 +52,10 @@ function MobileMenu() {
           !open ? "scale-y-100 scale-x-100" : "-scale-y-0 -scale-x-0"
         }`}
       >
-        <div class="space-y-2">
-          <div class="w-8 h-0.5 bg-black"></div>
-          <div class="w-8 h-0.5 bg-black"></div>
-          <div class="w-8 h-0.5 bg-black"></div>
+        <div className="space-y-2">
+          <div className="w-8 h-0.5 bg-black"></div>
+          <div className="w-8 h-0.5 bg-black"></div>
+          <div className="w-8 h-0.5 bg-black"></div>
         </div>
       </button>
       <div

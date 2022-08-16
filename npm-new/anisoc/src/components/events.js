@@ -10,8 +10,7 @@ function Event(props) {
         <div className="item-info pt-4 pb-4">
           <p className="item-title ">
             {props.title}
-            <p className="md:hidden"></p>
-            <span className="font-semibold text-xl md:text-2xl md:font-normal md:float-right">
+            <span className="font-semibold text-xl block md:inline md:text-2xl md:font-normal md:float-right">
               {props.location}, {props.date} / {props.time}
             </span>
           </p>
