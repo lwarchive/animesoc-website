@@ -25,7 +25,7 @@ function Events() {
     <>
       <div className="events" id="Events">
         <div className="title text-center md:text-right"> Upcoming Events </div>
-        {events.map((item, index) => {
+        {events.eventList.map((item, index) => {
           return (
             <Event
               key={index}

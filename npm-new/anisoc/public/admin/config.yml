@@ -1,0 +1,34 @@
+backend:
+  name: git-gateway
+  branch: next-js
+media_folder: public/images
+public_folder: images
+collections:
+  - name: "events"
+    label: "Events"
+    extension: "json"
+    editor:
+      preview: false
+
+    files:
+      - file: "components/data/events.json"
+        label: "Events Section"
+        name: "events"
+        fields:
+          - label: "Events"
+            name: "eventList"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: string }
+              - {
+                  label: "Start Time",
+                  name: "start_time",
+                  widget: datetime,
+                  default: "",
+                  date_format: "DD/MM/YYYY",
+                  time_format: "HH:MM",
+                  format: "LLL",
+                }
+              - { label: "Location", name: "location", widget: string }
+              - { label: "Description", name: "description", widget: string }
+              - { label: "Image", name: "image", widget: image }
