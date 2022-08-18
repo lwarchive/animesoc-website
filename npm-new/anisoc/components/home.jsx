@@ -1,7 +1,4 @@
-import "../index.css";
-
-//TODO: fetch from api
-const titleCopy = require("../json/home.json");
+import titleCopy from "./data/home.json";
 
 function Home() {
   return (
@@ -11,7 +8,7 @@ function Home() {
           <div className="home-title flex flex-col text-center lg:flex-row pt-8 pb-8">
             <img
               className="w-40 lg:w-2/12"
-              src="static/logo.png"
+              src="/images/logo.png"
               alt="AniSoc Logo"
             />
             <div className="my-5 mx-5 lg:w-1/2">

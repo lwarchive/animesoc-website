@@ -1,6 +1,4 @@
-import "../index.css";
-
-const aboutCopy = require("../json/about.json");
+import aboutCopy from "./data/about.json";
 
 //TODO: fetch from api
 

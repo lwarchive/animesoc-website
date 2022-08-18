@@ -1,6 +1,4 @@
-import "../index.css";
-
-const events = require("../json/events.json"); //replace with api call
+import events from "./data/events.json";
 
 function Event(props) {
   return (

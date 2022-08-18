@@ -1,5 +1,3 @@
-import "../../index.css";
-
 import { useState } from "react";
 
 import PersonIcon from "@mui/icons-material/Person";

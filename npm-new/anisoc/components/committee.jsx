@@ -1,6 +1,4 @@
-import "../index.css";
-
-const members = require("../json/committee.json");
+import members from "./data/committee.json";
 
 function CommitteeMember(props) {
   return (

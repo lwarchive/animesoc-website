@@ -1,6 +1,4 @@
-import "../index.css";
-
-const links = require("../json/join-us.json"); //TODO: fetch from api
+import links from "./data/join-us.json";
 
 function Link(props) {
   return (
