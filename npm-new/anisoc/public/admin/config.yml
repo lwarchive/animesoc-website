@@ -2,7 +2,7 @@ backend:
   name: github
   repo: stephanie-flower/animesoc-website
   branch: next-js
-  base_url: http://localhost:8000
+  base_url: https://api.leonic.co.uk
   auth_endpoint: /cms/auth
 media_folder: npm-new/anisoc/public/images
 public_folder: images
