@@ -1,7 +1,10 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: stephanie-flower/animesoc-website
   branch: next-js
-media_folder: public/images
+  base_url: http://localhost:8000
+  auth_endpoint: /cms/auth
+media_folder: npm-new/anisoc/public/images
 public_folder: images
 collections:
   - name: "events"
@@ -11,7 +14,7 @@ collections:
       preview: false
 
     files:
-      - file: "components/data/events.json"
+      - file: "npm-new/anisoc/components/data/events.json"
         label: "Events Section"
         name: "events"
         fields:
@@ -21,14 +24,14 @@ collections:
             fields:
               - { label: "Title", name: "title", widget: string }
               - {
-                  label: "Start Time",
-                  name: "start_time",
+                  label: "Date",
+                  name: "date",
                   widget: datetime,
                   default: "",
                   date_format: "DD/MM/YYYY",
-                  time_format: "HH:MM",
-                  format: "LLL",
+                  time_format: "HH:mm",
+                  format: "DD/MM/YYYY HH:mm",
                 }
               - { label: "Location", name: "location", widget: string }
-              - { label: "Description", name: "description", widget: string }
+              - { label: "Description", name: "description", widget: text }
               - { label: "Image", name: "image", widget: image }
