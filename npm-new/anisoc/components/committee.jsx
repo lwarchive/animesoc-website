@@ -21,7 +21,7 @@ function Committee() {
       <div className="backdrop-blur-sm rounded-sm">
         <div className="title "> Committee </div>
         <div className="committee-container flex flex-col lg:flex-row">
-          {members.map((item, index) => {
+          {members.committeeMembers.map((item, index) => {
             return (
               <CommitteeMember
                 key={index}

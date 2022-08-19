@@ -8,17 +8,15 @@ function Home() {
           <div className="home-title flex flex-col text-center lg:flex-row pt-8 pb-8">
             <img
               className="w-40 lg:w-2/12"
-              src="/images/logo.png"
-              alt="AniSoc Logo"
+              src={titleCopy.logo}
+              alt={titleCopy.logoAlt}
             />
             <div className="my-5 mx-5 lg:w-1/2">
-              <div className="text-lg lg:text-4xl">
-                Royal Holloway, University of London
+              <div className="text-lg lg:text-4xl">{titleCopy.subtitle}</div>
+              <div className="text-5xl lg:text-6xl">{titleCopy.title}</div>
+              <div className="text-base lg:text-lg">
+                {titleCopy.description}
               </div>
-              <div className="text-5xl lg:text-6xl">
-                Anime &amp; Manga Society
-              </div>
-              <div className="text-base lg:text-lg"> {titleCopy.desc} </div>
             </div>
           </div>
         </div>

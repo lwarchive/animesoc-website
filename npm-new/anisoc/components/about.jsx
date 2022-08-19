@@ -8,7 +8,7 @@ function About() {
       <div className="about text-center lg:text-left" id="About">
         <div className="title"> About </div>
         &nbsp;
-        <div className="copy"> {aboutCopy.about} </div>
+        <div className="copy"> {aboutCopy.text} </div>
       </div>
     </>
   );
