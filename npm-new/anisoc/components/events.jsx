@@ -1,6 +1,4 @@
-import "../index.css";
-
-const events = require("../json/events.json"); //replace with api call
+import events from "./data/events.json";
 
 function Event(props) {
   return (
@@ -27,7 +25,7 @@ function Events() {
     <>
       <div className="events" id="Events">
         <div className="title text-center md:text-right"> Upcoming Events </div>
-        {events.map((item, index) => {
+        {events.eventList.map((item, index) => {
           return (
             <Event
               key={index}

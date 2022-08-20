@@ -1,6 +1,4 @@
-import "../index.css";
-
-const polls = require("../json/polls.json");
+import polls from "./data/polls.json";
 
 function Poll(props) {
   return (

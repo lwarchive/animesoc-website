@@ -1,6 +1,4 @@
-import "../index.css";
-
-const members = require("../json/committee.json");
+import members from "./data/committee.json";
 
 function CommitteeMember(props) {
   return (
@@ -23,7 +21,7 @@ function Committee() {
       <div className="backdrop-blur-sm rounded-sm">
         <div className="title "> Committee </div>
         <div className="committee-container flex flex-col lg:flex-row">
-          {members.map((item, index) => {
+          {members.committeeMembers.map((item, index) => {
             return (
               <CommitteeMember
                 key={index}

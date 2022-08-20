@@ -1,0 +1,94 @@
+backend:
+  name: github
+  repo: stephanie-flower/animesoc-website
+  branch: next-js
+  base_url: https://api.leonic.co.uk
+  auth_endpoint: /cms/auth
+media_folder: npm-new/anisoc/public/images
+public_folder: images
+collections:
+  - name: "website"
+    label: "AniSoc Website"
+    extension: "json"
+    editor:
+      preview: false
+    files:
+      - file: "npm-new/anisoc/components/data/home.json"
+        label: "Landing Section"
+        name: "landing"
+        fields:
+          - label: "Title"
+            name: "title"
+            widget: "string"
+
+          - label: "Subtitle"
+            name: "subtitle"
+            widget: "string"
+
+          - label: "Description"
+            name: "description"
+            widget: "text"
+
+          - label: "Logo"
+            name: "logo"
+            widget: "image"
+
+          - label: "Logo alt text"
+            name: "logoAlt"
+            widget: "string"
+
+      - file: "npm-new/anisoc/components/data/about.json"
+        label: "About Section"
+        name: "about"
+        fields:
+          - label: "Text"
+            name: "text"
+            widget: "text"
+
+      - file: "npm-new/anisoc/components/data/join-us.json"
+        label: "Links Section"
+        name: "links"
+        fields:
+          - label: "Links"
+            name: "linkList"
+            widget: "list"
+            fields:
+              - { label: "Text", name: "text", widget: string }
+              - { label: "Link", name: "link", widget: string }
+              - { label: "Icon", name: "icon", widget: image }
+              - { label: "Colour", name: "colour", widget: color }
+
+      - file: "npm-new/anisoc/components/data/events.json"
+        label: "Events Section"
+        name: "events"
+        fields:
+          - label: "Events"
+            name: "eventList"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: string }
+              - {
+                  label: "Date",
+                  name: "date",
+                  widget: datetime,
+                  default: "",
+                  date_format: "DD/MM/YYYY",
+                  time_format: "HH:mm",
+                  format: "DD/MM/YYYY HH:mm",
+                }
+              - { label: "Location", name: "location", widget: string }
+              - { label: "Description", name: "description", widget: text }
+              - { label: "Image", name: "image", widget: image }
+
+      - file: "npm-new/anisoc/components/data/committee.json"
+        label: "Committee Section"
+        name: "committee"
+        fields:
+          - label: "Members"
+            name: "committeeMembers"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: string }
+              - { label: "Role", name: "role", widget: string }
+              - { label: "Description", name: "description", widget: text }
+              - { label: "Portrait", name: "portrait", widget: image }

@@ -58,7 +58,7 @@ a {
 }
 
 .home {
-  background-image: url(../public/static/title-background.png);
+  background-image: url(/images/title-background.png);
   font-family: "Josefin Sans", sans-serif;
   height: 95vh;
   display: flex;
@@ -80,7 +80,7 @@ a {
 }
 
 .about {
-  background-image: url(../public/static/about-background.png);
+  background-image: url(/images/about-background.png);
   padding: 4vw;
   padding-left: 7vw;
   padding-right: 7vw;
@@ -140,7 +140,7 @@ a {
 }
 
 .polls {
-  background-image: url(../public/static/polls-background.png);
+  background-image: url(/images/polls-background.png);
   padding: 4vw;
   padding-left: 7vw;
   padding-right: 7vw;
@@ -182,7 +182,7 @@ a {
 }
 
 .committee-members {
-  background-image: url(../public/static/committee-background.png);
+  background-image: url(/images/committee-background.png);
   padding: 4vw;
   padding-left: 7vw;
   padding-right: 7vw;

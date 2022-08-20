@@ -1,5 +1,3 @@
-import "../index.css";
-
 const menuitems = [
   "About",
   "Join Us",

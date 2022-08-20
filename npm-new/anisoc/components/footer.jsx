@@ -1,5 +1,3 @@
-import "../index.css";
-
 function Footer() {
   return (
     <div className="footer mt-2 mb-2 md:m-0">
