@@ -1,3 +1,4 @@
+import type { NextPage } from "next";
 import Home from "../components/home";
 import Menu from "../components/menu";
 import MobileMenu from "../components/mobile/menu";
@@ -7,10 +8,17 @@ import Events from "../components/events";
 import Polls from "../components/polls";
 import Committee from "../components/committee";
 import Footer from "../components/footer";
+import Head from "next/head";
 
-function App() {
+const Landing: NextPage = () => {
   return (
     <>
+      <Head>
+        <title>
+          Home - Anime Society of Royal Holloway, University of London
+        </title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <Home />
       <Menu />
       <MobileMenu />
@@ -22,6 +30,6 @@ function App() {
       <Footer />
     </>
   );
-}
+};
 
-export default App;
+export default Landing;
