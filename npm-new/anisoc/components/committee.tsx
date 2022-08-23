@@ -24,7 +24,7 @@ function CommitteeMember(props: CommitteeProps) {
 
 function Committee() {
   return (
-    <div className="committee-members flex flex-col " id="CommitteeMembers">
+    <div className="committee-members flex flex-col " id="committee-members">
       <div className="backdrop-blur-sm rounded-sm">
         <div className="title "> Committee </div>
         <div className="committee-container flex flex-col lg:flex-row">

@@ -23,7 +23,7 @@ function Poll(props: PollInterface) {
 
 function Polls() {
   return (
-    <div className="polls bg-cover bg-center" id="Polls">
+    <div className="polls bg-cover bg-center" id="polls">
       <div className="title text-center text-white md:text-left md:text-black transition-all duration-300">
         Polls
       </div>

@@ -32,7 +32,7 @@ function Event(props: EventProps) {
 function Events() {
   return (
     <>
-      <div className="events" id="Events">
+      <div className="events" id="events">
         <div className="title text-center md:text-right"> Upcoming Events </div>
         {events.eventList.map((item, index) => {
           const dateTime = item.date.split(" ");

@@ -5,7 +5,7 @@ import aboutCopy from "./data/about.json";
 function About() {
   return (
     <>
-      <div className="about text-center lg:text-left" id="About">
+      <div className="about text-center lg:text-left" id="about">
         <div className="title"> About </div>
         &nbsp;
         <div className="copy"> {aboutCopy.text} </div>
