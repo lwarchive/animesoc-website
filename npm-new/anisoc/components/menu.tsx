@@ -1,16 +1,11 @@
-const menuitems = [
-  "About",
-  "Join Us",
-  "Events",
-  "Polls",
-  "Gallery",
-  "Committee",
-];
+import menuData from "./data/menu.json";
 
-//TODO: make scrolling buttons work
+interface MenuItemProps {
+  menuItem: { id: string; name: string; icon: string };
+}
 
-function MenuItem(props: { name: string }) {
-  const scrollto = (element: string) => {
+function MenuItem(props: MenuItemProps) {
+  const scrollTo = (element: string) => {
     var targetPosition = document.getElementById(element);
     if (targetPosition == null) {
       console.log("Cannot find " + element);
@@ -21,7 +16,14 @@ function MenuItem(props: { name: string }) {
 
   return (
     <>
-      <div className="menu-item">{props.name}</div>
+      <div
+        className="menu-item"
+        onClick={() => {
+          scrollTo(props.menuItem.id);
+        }}
+      >
+        {props.menuItem.name}
+      </div>
     </>
   );
 }
@@ -30,8 +32,8 @@ function Menu() {
   return (
     <>
       <div className="menu -scale-y-0 lg:visible lg:scale-100 transition-all duration-200 origin-top">
-        {menuitems.map((item, index) => {
-          return <MenuItem key={index} name={item} />;
+        {menuData.menuItems.map((item, index) => {
+          return <MenuItem key={index} menuItem={item} />;
         })}
       </div>
     </>

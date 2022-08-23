@@ -1,18 +1,12 @@
 import { useState } from "react";
+import menuData from "../data/menu.json";
 
-const menuItems = [
-  { id: "about", name: "About", icon: "person" },
-  { id: "join-us", name: "Join Us", icon: "group_add" },
-  { id: "events", name: "Events", icon: "event" },
-  { id: "polls", name: "Polls", icon: "poll" },
-  { id: "gallery", name: "Gallery", icon: "collections" },
-  { id: "committee-members", name: "Committee", icon: "groups" },
-];
-
-function MenuItem(props: {
+interface MenuItemProps {
   menuItem: { id: string; name: string; icon: string };
   setState: any;
-}) {
+}
+
+function MenuItem(props: MenuItemProps) {
   const scrollTo = (element: string) => {
     var targetPosition = document.getElementById(element);
     if (targetPosition == null) {
@@ -61,7 +55,7 @@ function MobileMenu() {
           open ? "scale-y-100 scale-x-100" : "-scale-y-0 -scale-x-0"
         } duration-150 origin-bottom-right transition-all`}
       >
-        {menuItems.map((item, index) => {
+        {menuData.menuItems.map((item, index) => {
           return <MenuItem key={index} menuItem={item} setState={setOpen} />;
         })}
         <div
