@@ -11,6 +11,10 @@ function Document() {
           crossOrigin="true"
         />
         <link
+          href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet"
+        />
+        <link
           href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&amp;display=swap"
           rel="stylesheet"
         />
