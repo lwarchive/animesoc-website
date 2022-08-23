@@ -1,6 +1,13 @@
 import links from "./data/join-us.json";
 
-function Link(props) {
+interface LinkProps {
+  text: string;
+  link: string;
+  colour: string;
+  icon: string;
+}
+
+function Link(props: LinkProps) {
   return (
     <>
       <a href={props.link}>

@@ -1,6 +1,13 @@
 import members from "./data/committee.json";
 
-function CommitteeMember(props) {
+interface CommitteeProps {
+  name: string;
+  role: string;
+  portrait: string;
+  description: string;
+}
+
+function CommitteeMember(props: CommitteeProps) {
   return (
     <>
       <div className="committee-member max-w-sm">
