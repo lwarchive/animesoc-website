@@ -1,0 +1,132 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+
+    <head> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Lato&display=swap" rel="stylesheet">
+        <title> Anime & Manga Society </title>
+        <link rel="icon" href="{% static 'anime soc logo2.png' %}">
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js">
+        </script>
+    </head>
+
+    <body>
+
+
+        <div class="headerbar">
+            <img src="{% static 'anime soc logo2.png' %}">
+            <div class="title">
+                Anime & Manga Society <br>
+                <div class="subtitle">
+                    Royal Holloway's hangout for fans of anime, manga, and Japanese media
+                </div>
+            </div>
+            <div class="smstray">
+                <a href="https://www.su.rhul.ac.uk/societies/a-z/animeandmanga/"> <img alt="Royal Holloway Students' Union" src="{% static 'rhsu-logo.svg' %}"> </a>
+                <a href="https://rhulani.me/discord"> <img alt="Discord" src="{% static 'discord-logo.svg' %}"> </a>
+                <a href="https://www.facebook.com/groups/animemangarhul"> <img alt="Facebook" src="{% static 'facebook-logo.svg' %}"> </a>
+                <a href="https://www.instagram.com/rhulanime/"> <img alt="Instagram" src="{% static 'instagram-logo.svg' %}"> </a>
+            </div>
+            <div class="dropdown-container">
+                <div class="dropdown"> <img src={% static 'menu.svg' %}>
+                    <div class="dropdown-content">
+                        <a href="#about"> About </a>
+                        <a href="#joinus"> Join Us </a>
+                        <a href="#events"> Events </a>
+                        <a href="#committee"> Committee </a>
+                     </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="navigationbar">
+            <div class="navigationlink"> <a href="#about"> About </a> </div>
+            <div class="navigationlink"> <a href="#joinus"> Join Us </a> </div>
+            <div class="navigationlink"> <a href="#events"> Events </a> </div>
+            <div class="navigationlink"> <a href="#committee"> Committee </a> </div>
+        </div>
+
+        <div class="about" id="about">
+            <div class="sectiontitle"> Welcome! </div>
+            <div class="copy">
+                We are the Anime & Manga Society. <br>
+                We're a friendly, open, and inclusive society, who gather weekly to watch Japanese animation (also known as anime) and discuss our interests in manga. <br>
+                Our main weekly activities consist of watching anime and other associated media together. <br>
+            </div>
+            <div class="copy">
+                Subscribe to our mailing list:
+                <form action="#" method="post">
+                    {% csrf_token %}
+                    <div class="mailing-list">
+                        {{ form.as_p }}
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="joinus" id="joinus">
+            <div class="sectiontitle"> Join Us </div> <br>
+            <div class="joinus-buttoncontainer">
+                <a class="joinusbutton" href="https://www.su.rhul.ac.uk/societies/a-z/animeandmanga/" target="_blank"> Buy Membership </a>
+                <a class="joinusbutton" href="https://rhulani.me/discord" target="_blank"> Join our Discord </a>
+                <a class="joinusbutton" href="https://www.facebook.com/groups/animemangarhul" target="_blank"> Follow our Facebook Page </a>
+                <a class="joinusbutton" href="https://www.instagram.com/rhulanime/" target="_blank"> Check out our Instagram </a>
+            </div>
+            <div class="copy">
+            </div>
+        </div>
+
+        <div class="events" id="events">
+            <div class="sectiontitle"> Upcoming Events </div>
+            <br>
+            <div class="eventsdisplay">
+                {% for event in events %}
+                    {% if event.show_event %}
+                        <div class="event">
+                        <div class="eventTitle"> <b> {{ event.name }} </b> </div>
+                        <div class="eventDesc">
+                            <b> Where: {{ event.event_location|safe }} <br>
+                            When: {{ event.event_time|date:"l jS M, g:iA" }} <br> </b>
+                            <i> {{ event.event_description|safe }} </i> <br>
+                        </div> </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="committee" id="committee">
+            <div class="sectiontitle"> Our Committee </div>
+            <div class="committeeimages">
+                <img alt="President Jamie Dootson" src="{% static 'president.jpg' %}">
+                <img alt="Treasurer Mia Marumoto Quinn" src="{% static 'treasurer.jpg' %}">
+                <img alt="Secretary Dylan Goddard" src="{% static 'secretary.jpg' %}">
+            </div>
+        </div>
+
+        <div class="credit">
+            site by <a href="https://www.linkedin.com/in/stephanie-flower-099478178/" target="_blank"> steph! </a>
+        </div>
+
+        <script>
+            let anchorSelector = 'a[href^="#"]';
+            $(anchorSelector).on('click', function (e) {
+                e.preventDefault();
+                let destination = $(this.hash);
+                let scrollPosition
+                    = destination.offset().top - 38;
+                let animationDuration = 500;
+                $('html, body').animate({
+                    scrollTop: scrollPosition
+                }, animationDuration);
+            });
+        </script>
+
+    </body>
+
+</html>

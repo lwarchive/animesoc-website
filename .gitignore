@@ -1,2 +1,3 @@
 *.pyc
 /animesocsite/db.sqlite3
+/npm-new/anisoc/node_modules/
