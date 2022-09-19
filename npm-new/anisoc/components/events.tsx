@@ -1,6 +1,15 @@
 import events from "./data/events.json";
 
-function Event(props) {
+interface EventProps {
+  title: string;
+  description: string;
+  image: string;
+  location: string;
+  date: string;
+  time: string;
+}
+
+function Event(props: EventProps) {
   return (
     <>
       <div className="event flex flex-col lg:flex-row pb-8">
@@ -23,15 +32,17 @@ function Event(props) {
 function Events() {
   return (
     <>
-      <div className="events" id="Events">
+      <div className="events" id="events">
         <div className="title text-center md:text-right"> Upcoming Events </div>
         {events.eventList.map((item, index) => {
+          const dateTime = item.date.split(" ");
+
           return (
             <Event
               key={index}
               title={item.title}
-              date={item.date}
-              time={item.time}
+              date={dateTime[0]}
+              time={dateTime[1]}
               location={item.location}
               description={item.description}
               image={item.image}

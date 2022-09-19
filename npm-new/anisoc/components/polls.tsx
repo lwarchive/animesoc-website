@@ -1,6 +1,11 @@
 import polls from "./data/polls.json";
 
-function Poll(props) {
+interface PollInterface {
+  title: string;
+  description: string;
+}
+
+function Poll(props: PollInterface) {
   return (
     <>
       <div className="poll w-full backdrop-blur-sm rounded-sm mb-4 md:mb-0 md:ml-4 lg:w-1/2 ">
@@ -18,7 +23,7 @@ function Poll(props) {
 
 function Polls() {
   return (
-    <div className="polls bg-cover bg-center" id="Polls">
+    <div className="polls bg-cover bg-center" id="polls">
       <div className="title text-center text-white md:text-left md:text-black transition-all duration-300">
         Polls
       </div>

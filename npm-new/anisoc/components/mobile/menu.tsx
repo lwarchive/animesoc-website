@@ -1,27 +1,18 @@
 import { useState } from "react";
+import menuData from "../data/menu.json";
 
-import PersonIcon from "@mui/icons-material/Person";
-import GroupsIcon from "@mui/icons-material/Groups";
-import GroupAddIcon from "@mui/icons-material/GroupAdd";
-import EventIcon from "@mui/icons-material/Event";
-import PollIcon from "@mui/icons-material/Poll";
-import CollectionsIcon from "@mui/icons-material/Collections";
-import CloseIcon from "@mui/icons-material/Close";
+interface MenuItemProps {
+  menuItem: { id: string; name: string; icon: string };
+  setState: any;
+}
 
-const menuItems = [
-  { name: "About", icon: PersonIcon },
-  { name: "Join Us", icon: GroupAddIcon },
-  { name: "Events", icon: EventIcon },
-  { name: "Polls", icon: PollIcon },
-  { name: "Gallery", icon: CollectionsIcon },
-  { name: "Committee", icon: GroupsIcon },
-];
-
-//TODO: make scrolling buttons work
-
-function MenuItem(props) {
-  const scrollto = (element) => {
+function MenuItem(props: MenuItemProps) {
+  const scrollTo = (element: string) => {
     var targetPosition = document.getElementById(element);
+    if (targetPosition == null) {
+      console.log("Cannot find " + element);
+      return;
+    }
     targetPosition.scrollIntoView({ behavior: "smooth" });
   };
 
@@ -29,9 +20,12 @@ function MenuItem(props) {
     <>
       <div
         className="mobile-menu-item flex flex-col items-center"
-        onClick={scrollto}
+        onClick={() => {
+          scrollTo(props.menuItem.id);
+          props.setState(false);
+        }}
       >
-        <props.menuItem.icon />
+        <i className="material-icons">{props.menuItem.icon}</i>
         <span className="block">{props.menuItem.name}</span>
       </div>
     </>
@@ -61,14 +55,14 @@ function MobileMenu() {
           open ? "scale-y-100 scale-x-100" : "-scale-y-0 -scale-x-0"
         } duration-150 origin-bottom-right transition-all`}
       >
-        {menuItems.map((item, index) => {
-          return <MenuItem key={index} menuItem={item} />;
+        {menuData.menuItems.map((item, index) => {
+          return <MenuItem key={index} menuItem={item} setState={setOpen} />;
         })}
         <div
           className="mobile-menu-item flex flex-col items-center col-start-3"
           onClick={() => setOpen(!open)}
         >
-          <CloseIcon />
+          <i className="material-icons">close</i>
           <span className="block">Close</span>
         </div>
       </div>

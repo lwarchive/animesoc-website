@@ -1,6 +1,13 @@
 import links from "./data/join-us.json";
 
-function Link(props) {
+interface LinkProps {
+  text: string;
+  link: string;
+  colour: string;
+  icon: string;
+}
+
+function Link(props: LinkProps) {
   return (
     <>
       <a href={props.link}>
@@ -19,7 +26,7 @@ function Link(props) {
 function JoinUs() {
   return (
     <>
-      <div className="join-us flex flex-col lg:flex-row" id="Join Us">
+      <div className="join-us flex flex-col lg:flex-row" id="join-us">
         <div className="title"> Join Us </div>
         &nbsp;
         <div className="flex flex-col lg:flex-row lg:grid lg:grid-cols-4 lg:gap-3">
