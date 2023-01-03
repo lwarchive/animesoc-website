@@ -25,7 +25,6 @@ const Landing: NextPage = () => {
       <About />
       <JoinUs />
       <Events />
-      <Polls />
       <Committee />
       <Footer />
     </>
