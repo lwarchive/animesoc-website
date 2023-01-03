@@ -27,7 +27,7 @@ function JoinUs() {
   return (
     <>
       <div className="join-us flex flex-col lg:flex-row" id="join-us">
-        <div className="title"> Join Us </div>
+        <div className="title">Join us</div>
         &nbsp;
         <div className="flex flex-col lg:flex-row lg:grid lg:grid-cols-4 lg:gap-3">
           {links.linkList.map((item, index) => {
