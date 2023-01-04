@@ -23,7 +23,6 @@ const Landing: NextPage = () => {
       <MobileMenu />
       <About />
       <JoinUs />
-      <Events />
       <Committee />
       <Footer />
     </>
