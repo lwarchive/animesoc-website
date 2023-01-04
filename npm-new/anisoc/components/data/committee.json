@@ -3,20 +3,20 @@
     {
       "name": "***REMOVED***",
       "role": "President",
-      "description": "***REMOVED*** is a big stinky smelly boy and this is a little bit about him as the stinky president of stinky smelly anime society i am tired of starting at lroem ipsum what the fuck",
-      "portrait": "/images/oscar.png"
+      "description": "3rd Year Biology<br />Favourite Anime: ***REMOVED***<br />***REMOVED***",
+      "portrait": "/images/committee/president.png"
     },
     {
       "name": "***REMOVED***",
       "role": "Secretary",
-      "description": "***REMOVED*** is a big stinky smelly boy and this is a little bit about him as the stinky president of stinky smelly anime society i am tired of starting at lroem ipsum what the fuck",
-      "portrait": "/images/oscar.png"
+      "description": "2nd Year Computer Science<br />Favourite Anime: ***REMOVED***<br />***REMOVED***",
+      "portrait": "/images/committee/secretary.png"
     },
     {
-      "name": "***REMOVED***",
+      "name": "Leo",
       "role": "Treasurer",
-      "description": "***REMOVED*** is a big stinky smelly boy and this is a little bit about him as the stinky president of stinky smelly anime society i am tired of starting at lroem ipsum what the fuck",
-      "portrait": "/images/oscar.png"
+      "description": "2nd Year Computer Science<br />Favourite Anime: Steins;Gate<br />Accidentally entered a masters lecture in Week 1 and was too awkward to leave.",
+      "portrait": "/images/committee/treasurer.png"
     }
   ]
 }
