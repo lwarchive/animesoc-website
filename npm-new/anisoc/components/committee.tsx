@@ -1,4 +1,5 @@
 import members from "./data/committee.json";
+import parse from "html-react-parser";
 
 interface CommitteeProps {
   name: string;
@@ -15,7 +16,7 @@ function CommitteeMember(props: CommitteeProps) {
         <div className="committee-member-info">
           <p className="item-title">{props.name}</p>
           <p className="item-subtitle">{props.role}</p>
-          <p className="item-description">{props.description}</p>
+          <p className="item-description">{parse(props.description)}</p>
         </div>
       </div>
     </>
