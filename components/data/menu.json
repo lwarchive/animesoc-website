@@ -2,8 +2,6 @@
   "menuItems": [
     { "id": "about", "name": "About", "icon": "person" },
     { "id": "join-us", "name": "Join Us", "icon": "group_add" },
-    { "id": "events", "name": "Events", "icon": "event" },
-    { "id": "gallery", "name": "Gallery", "icon": "collections" },
     { "id": "committee-members", "name": "Committee", "icon": "groups" }
   ]
 }
