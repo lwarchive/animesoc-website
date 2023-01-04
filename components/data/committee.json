@@ -1,0 +1,22 @@
+{
+  "committeeMembers": [
+    {
+      "name": "***REMOVED***",
+      "role": "President",
+      "description": "3rd Year Biology<br />Favourite Anime: ***REMOVED***<br />***REMOVED***",
+      "portrait": "/images/committee/president.png"
+    },
+    {
+      "name": "***REMOVED***",
+      "role": "Secretary",
+      "description": "2nd Year Computer Science<br />Favourite Anime: ***REMOVED***<br />***REMOVED***",
+      "portrait": "/images/committee/secretary.png"
+    },
+    {
+      "name": "Leo",
+      "role": "Treasurer",
+      "description": "2nd Year Computer Science<br />Favourite Anime: Steins;Gate<br />Accidentally entered a masters lecture in Week 1 and was too awkward to leave.",
+      "portrait": "/images/committee/treasurer.png"
+    }
+  ]
+}
