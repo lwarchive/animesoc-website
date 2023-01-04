@@ -9,7 +9,6 @@
 
 # next.js
 /.next/
-/out/
 
 # production
 /build
@@ -117,7 +116,8 @@ web_modules/
 
 # Next.js build output
 .next
-out
+out/*
+!out/_redirects
 
 # Nuxt.js build / generate output
 .nuxt
