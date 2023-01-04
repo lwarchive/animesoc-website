@@ -12,9 +12,7 @@ function Home() {
               alt={titleCopy.logoAlt}
             />
             <div className="my-5 mx-5 lg:w-1/2">
-              <div className="text-base lg:text-lg">
-                {titleCopy.higherTitle}
-              </div>
+              <div className="text-lg lg:text-3xl">{titleCopy.higherTitle}</div>
               <div className="text-lg lg:text-4xl">{titleCopy.subtitle}</div>
               <div className="text-5xl lg:text-6xl">{titleCopy.title}</div>
             </div>
