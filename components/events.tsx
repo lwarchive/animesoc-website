@@ -1,4 +1,8 @@
+import { usePapaParse } from "react-papaparse";
 import events from "./data/events.json";
+
+const { readString } = usePapaParse();
+const dataSource = `https://docs.google.com/spreadsheets/d/e/2PACX-1vRAHUQzFuZ1O0J7soL5Wud5CEbA3MLv4T4Pqms_KhAueNoFX6h2T0DTGwgaLu92FYWdnFV50Q0F1AHY/pub?gid=0&single=true&output=csv`;
 
 interface EventProps {
   title: string;
@@ -7,6 +11,21 @@ interface EventProps {
   location: string;
   date: string;
   time: string;
+}
+
+function fetchEventData() {
+  fetch(dataSource).then((response) => {
+    response.text().then((text) => {
+      readString(text, {
+        header: true,
+        worker: true,
+        complete: (results) => {
+          console.log(results);
+          return results;
+        },
+      });
+    });
+  });
 }
 
 function Event(props: EventProps) {
@@ -30,6 +49,7 @@ function Event(props: EventProps) {
 }
 
 function Events() {
+  let eventData = fetchEventData();
   return (
     <>
       <div className="events" id="events">
