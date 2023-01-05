@@ -1,4 +1,6 @@
-import { parse, ParseResult } from "papaparse";
+import Papa from "papaparse";
+import { ParseResult } from "papaparse";
+import parse from "html-react-parser";
 import React, { useEffect, useState } from "react";
 
 const dataSource = `https://docs.google.com/spreadsheets/d/e/2PACX-1vRAHUQzFuZ1O0J7soL5Wud5CEbA3MLv4T4Pqms_KhAueNoFX6h2T0DTGwgaLu92FYWdnFV50Q0F1AHY/pub?gid=0&single=true&output=csv`;
@@ -27,16 +29,20 @@ function Event(props: EventProps) {
   return (
     <>
       <div className="event flex flex-col lg:flex-row pb-8">
-        <img src={props.image} alt={props.title} />
+        <img
+          className="object-scale-down object-center md:w-52 lg:object-left"
+          src={props.image == "" ? "/images/events/event1.png" : props.image}
+          alt={props.title}
+        />
         <div className="item-info pt-4 pb-4">
           <p className="item-title ">
             {props.title}
-            <span className="font-semibold text-xl block md:inline md:text-2xl md:font-normal md:float-right">
+            <span className="font-semibold text-xl block 2xl:inline 2xl:text-2xl 2xl:font-normal 2xl:float-right">
               {props.location}, {props.date} / {props.time}
             </span>
           </p>
 
-          <span className="item-description">{props.description}</span>
+          <span className="item-description">{parse(props.description)}</span>
         </div>
       </div>
     </>
@@ -51,7 +57,7 @@ const Events = () => {
       const data = await resp.text();
 
       // TODO: Handle errors
-      const parsedResult = parse(data, {
+      const parsedResult = Papa.parse(data, {
         header: true,
       });
       const parsedData = (parsedResult as ParseResult<CalendarData>).data;
