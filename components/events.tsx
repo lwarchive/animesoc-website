@@ -13,7 +13,16 @@ interface EventProps {
   time: string;
 }
 
-function fetchEventData() {
+interface CalendarData {
+  title: string;
+  description: string;
+  location: string;
+  startDate: string;
+  endDate: string;
+  imageURL: string;
+}
+
+function fetchEventData(): CalendarData[] {
   fetch(dataSource).then((response) => {
     response.text().then((text) => {
       readString(text, {
@@ -26,6 +35,7 @@ function fetchEventData() {
       });
     });
   });
+  return [];
 }
 
 function Event(props: EventProps) {
