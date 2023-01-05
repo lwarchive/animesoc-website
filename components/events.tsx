@@ -2,8 +2,8 @@ import { parse, ParseResult } from "papaparse";
 import React, { useEffect, useState } from "react";
 
 const dataSource = `https://docs.google.com/spreadsheets/d/e/2PACX-1vRAHUQzFuZ1O0J7soL5Wud5CEbA3MLv4T4Pqms_KhAueNoFX6h2T0DTGwgaLu92FYWdnFV50Q0F1AHY/pub?gid=0&single=true&output=csv`;
-//const dataSource = "";
 
+// Our event component
 interface EventProps {
   title: string;
   description: string;
@@ -13,6 +13,7 @@ interface EventProps {
   time: string;
 }
 
+// How the data retrieved from the CSV should look
 interface CalendarData {
   title: string;
   description: string;
@@ -42,39 +43,6 @@ function Event(props: EventProps) {
   );
 }
 
-// export default async function Events() {
-//   let eventData = parse(await fetchEventData());
-//   console.log(eventData);
-//   return (
-//     <>
-//       <div className="events" id="events">
-//         <div className="title text-center md:text-right"> Upcoming Events </div>
-//         {/* {eventData.map((item, index) => {
-//           const dateTime = new Date(item.startDate);
-
-//           return (
-//             <Event
-//               key={index}
-//               title={item.title}
-//               date={dateTime.toLocaleDateString()}
-//               time={dateTime.toLocaleTimeString()}
-//               location={item.location}
-//               description={item.description}
-//               image={item.imageURL}
-//             />
-//           );
-//         })} */}
-//       </div>
-//     </>
-//   );
-// }
-
-function test(data: CalendarData[]) {
-  console.log(data);
-
-  return <span>d</span>;
-}
-
 const Events = () => {
   const [events, updateEvents] = useState<CalendarData[]>();
   useEffect(() => {
@@ -83,7 +51,7 @@ const Events = () => {
       const data = await resp.text();
 
       // TODO: Handle errors
-      const parsedResult = await parse(data, {
+      const parsedResult = parse(data, {
         header: true,
       });
       const parsedData = (parsedResult as ParseResult<CalendarData>).data;
