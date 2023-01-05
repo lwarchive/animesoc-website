@@ -30,7 +30,7 @@ function Event(props: EventProps) {
     <>
       <div className="event flex flex-col lg:flex-row pb-8">
         <img
-          className="object-scale-down object-center md:w-52 lg:object-left"
+          className="object-fill object-center md:w-64 lg:object-left"
           src={props.image == "" ? "/images/events/event1.png" : props.image}
           alt={props.title}
         />
