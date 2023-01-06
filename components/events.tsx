@@ -4,6 +4,7 @@ import parse from "html-react-parser";
 import React, { useEffect, useState } from "react";
 import browserLocalstorage from "browser-localstorage-expire";
 
+// A collection of
 const eventNoImage = [
   "/images/events/event1.png",
   "/images/events/event2.png",
@@ -12,6 +13,7 @@ const eventNoImage = [
 
 // Constant values for caching and event fetching etc
 const eventSource = `https://docs.google.com/spreadsheets/d/e/2PACX-1vRAHUQzFuZ1O0J7soL5Wud5CEbA3MLv4T4Pqms_KhAueNoFX6h2T0DTGwgaLu92FYWdnFV50Q0F1AHY/pub?gid=0&single=true&output=csv`;
+const eventCalendar = `https://calendar.google.com/calendar/embed?src=c_8219055ac4671ef4f7faec2be6f2db0d38d1e3b23c3b4e94d81b71fdc3c6a0e4%40group.calendar.google.com&ctz=Europe%2FLondon`;
 
 // Cache keys for events and images
 const cacheKeyEvents = "event-data";
@@ -147,6 +149,17 @@ const Events = () => {
               />
             );
           })}
+          <p className="text-center">
+            <i
+              className="material-icons"
+              onClick={() => {
+                window.location.href = eventCalendar;
+              }}
+            >
+              event
+            </i>
+            <a href={eventCalendar}> View full event calendar</a>
+          </p>
         </>
       ) : (
         <>
