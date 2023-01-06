@@ -120,36 +120,34 @@ const Events = () => {
   }, []);
 
   return (
-    <>
-      <div className="events" id="events">
-        <div className="title text-center md:text-right"> Upcoming Events </div>
-        {events ? (
-          <FadeIn>
-            {events.slice(0, 4).map((item, index) => {
-              const dateTime = new Date(item.startDate);
+    <div className="events" id="events">
+      <div className="title text-center md:text-right"> Upcoming Events </div>
+      {events ? (
+        <FadeIn>
+          {events.slice(0, 4).map((item, index) => {
+            const dateTime = new Date(item.startDate);
 
-              return (
-                <Event
-                  key={index}
-                  title={item.title}
-                  date={dateTime.toLocaleDateString()}
-                  time={dateTime.toLocaleTimeString()}
-                  location={item.location}
-                  description={item.description}
-                  image={item.imageURL}
-                />
-              );
-            })}
-          </FadeIn>
-        ) : (
-          <FadeIn>
-            <PlaceholderEvent />
-            <PlaceholderEvent />
-            <PlaceholderEvent />
-          </FadeIn>
-        )}
-      </div>
-    </>
+            return (
+              <Event
+                key={index}
+                title={item.title}
+                date={dateTime.toLocaleDateString()}
+                time={dateTime.toLocaleTimeString()}
+                location={item.location}
+                description={item.description}
+                image={item.imageURL}
+              />
+            );
+          })}
+        </FadeIn>
+      ) : (
+        <FadeIn>
+          <PlaceholderEvent />
+          <PlaceholderEvent />
+          <PlaceholderEvent />
+        </FadeIn>
+      )}
+    </div>
   );
 };
 
