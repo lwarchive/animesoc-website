@@ -2,6 +2,7 @@ import Papa from "papaparse";
 import { ParseResult } from "papaparse";
 import parse from "html-react-parser";
 import React, { useEffect, useState } from "react";
+import browserLocalstorage from "browser-localstorage-expire";
 
 const dataSource = `https://docs.google.com/spreadsheets/d/e/2PACX-1vRAHUQzFuZ1O0J7soL5Wud5CEbA3MLv4T4Pqms_KhAueNoFX6h2T0DTGwgaLu92FYWdnFV50Q0F1AHY/pub?gid=0&single=true&output=csv`;
 
@@ -53,15 +54,28 @@ const Events = () => {
   const [events, updateEvents] = useState<CalendarData[]>();
   useEffect(() => {
     const fetchEvents = async () => {
-      const resp = await fetch(dataSource);
-      const data = await resp.text();
+      const localCache = browserLocalstorage();
+      let eventData = localCache.getItem("event-data") as string;
 
+      if (eventData == null) {
+        const resp = await fetch(dataSource);
+        eventData = await resp.text();
+
+        localCache.setItem(
+          "event-data",
+          JSON.stringify({ data: eventData }),
+          30
+        );
+      } else {
+        eventData = JSON.parse(eventData).data;
+      }
       // TODO: Handle errors
-      const parsedResult = Papa.parse(data, {
+      const parsedResult = Papa.parse(eventData, {
         header: true,
       });
+      console.log(parsedResult);
       const parsedData = (parsedResult as ParseResult<CalendarData>).data;
-
+      console.log(parsedData);
       updateEvents(parsedData);
     };
     fetchEvents();
