@@ -10,6 +10,7 @@
     "export": "next build && next export"
   },
   "dependencies": {
+    "browser-localstorage-expire": "^1.8.1",
     "html-react-parser": "^3.0.6",
     "next": "12.2.5",
     "papaparse": "^5.3.2",

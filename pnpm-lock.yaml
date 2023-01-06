@@ -7,6 +7,7 @@ specifiers:
   '@types/react': 18.0.17
   '@types/react-dom': 18.0.6
   autoprefixer: ^10.4.8
+  browser-localstorage-expire: ^1.8.1
   eslint: 8.22.0
   eslint-config-next: 12.2.5
   html-react-parser: ^3.0.6
@@ -21,6 +22,7 @@ specifiers:
   write-json-file: ^5.0.0
 
 dependencies:
+  browser-localstorage-expire: 1.8.1
   html-react-parser: 3.0.6_react@18.2.0
   next: 12.2.5_biqbaboplfbrettd7655fr4n2y
   papaparse: 5.3.2
@@ -800,6 +802,10 @@ packages:
     dependencies:
       fill-range: 7.0.1
     dev: true
+
+  /browser-localstorage-expire/1.8.1:
+    resolution: {integrity: sha512-+s11/F9UICk6BNjKamMQnnklYu1hinyl9C2WFnQN1qZmADWs79JV6LdsjaqQu4k9sxMz6PjNElgbJVlOU4gTZg==}
+    dev: false
 
   /browserslist/4.21.3:
     resolution: {integrity: sha512-898rgRXLAyRkM1GryrrBHGkqA5hlpkV5MhtZwg9QXeiyLUYs2k00Un05aX5l2/yJIOObYKOpS2JNo8nJDE7fWQ==}
