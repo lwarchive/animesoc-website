@@ -4,14 +4,23 @@ import parse from "html-react-parser";
 import React, { useEffect, useState } from "react";
 import browserLocalstorage from "browser-localstorage-expire";
 import FadeIn from "react-fade-in";
-
-const dataSource = `https://docs.google.com/spreadsheets/d/e/2PACX-1vRAHUQzFuZ1O0J7soL5Wud5CEbA3MLv4T4Pqms_KhAueNoFX6h2T0DTGwgaLu92FYWdnFV50Q0F1AHY/pub?gid=0&single=true&output=csv`;
-
 const eventNoImage = [
   "/images/events/event1.png",
   "/images/events/event2.png",
   "/images/events/event3.png",
 ];
+
+// Constant values for caching and event fetching etc
+const eventSource = `https://docs.google.com/spreadsheets/d/e/2PACX-1vRAHUQzFuZ1O0J7soL5Wud5CEbA3MLv4T4Pqms_KhAueNoFX6h2T0DTGwgaLu92FYWdnFV50Q0F1AHY/pub?gid=0&single=true&output=csv`;
+
+// Cache keys for events and images
+const cacheKeyEvents = "event-data";
+const cacheKeyImages = "event-images";
+
+// How many events to display in the component
+const eventDisplayLimit = 4;
+// How often a client should fetch from the calendar
+const eventUpdateFrequency = 30;
 
 // Our event component
 interface EventProps {
@@ -90,18 +99,18 @@ const Events = () => {
   useEffect(() => {
     const fetchEvents = async () => {
       const localCache = browserLocalstorage();
-      let eventData = localCache.getItem("event-data") as string;
+      let eventData = localCache.getItem(cacheKeyEvents) as string;
 
       // Check if a cached version of events exist on the browser
       if (eventData == null) {
-        const resp = await fetch(dataSource);
+        const resp = await fetch(eventSource);
         eventData = await resp.text();
 
-        // Cache the retrieved CSV data for 30 minutes
+        // Cache the retrieved CSV data for 30 minutes (by default)
         localCache.setItem(
-          "event-data",
+          cacheKeyEvents,
           JSON.stringify({ data: eventData }),
-          30
+          eventUpdateFrequency
         );
       } else {
         // Get the CSV data from LocalStorage
@@ -124,9 +133,8 @@ const Events = () => {
       <div className="title text-center md:text-right"> Upcoming Events </div>
       {events ? (
         <FadeIn>
-          {events.slice(0, 4).map((item, index) => {
+          {events.slice(0, eventDisplayLimit).map((item, index) => {
             const dateTime = new Date(item.startDate);
-
             return (
               <Event
                 key={index}
