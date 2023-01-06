@@ -3,7 +3,7 @@ import { ParseResult } from "papaparse";
 import parse from "html-react-parser";
 import React, { useEffect, useState } from "react";
 import browserLocalstorage from "browser-localstorage-expire";
-import FadeIn from "react-fade-in";
+
 const eventNoImage = [
   "/images/events/event1.png",
   "/images/events/event2.png",
@@ -132,7 +132,7 @@ const Events = () => {
     <div className="events" id="events">
       <div className="title text-center md:text-right"> Upcoming Events </div>
       {events ? (
-        <FadeIn>
+        <>
           {events.slice(0, eventDisplayLimit).map((item, index) => {
             const dateTime = new Date(item.startDate);
             return (
@@ -147,13 +147,13 @@ const Events = () => {
               />
             );
           })}
-        </FadeIn>
+        </>
       ) : (
-        <FadeIn>
+        <>
           <PlaceholderEvent />
           <PlaceholderEvent />
           <PlaceholderEvent />
-        </FadeIn>
+        </>
       )}
     </div>
   );
