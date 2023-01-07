@@ -176,7 +176,7 @@ const Events = (props: EventsProps) => {
       updateEvents(parsedData);
     };
     fetchData();
-  }, []);
+  }, [props.dataSource]);
 
   return (
     <div className="events" id="events">
