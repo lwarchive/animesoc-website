@@ -1,32 +1,24 @@
+import React, { useEffect, useState } from "react";
+
 import Papa from "papaparse";
 import { ParseResult } from "papaparse";
+
 import parse from "html-react-parser";
-import React, { useEffect, useState } from "react";
+
 import browserLocalstorage from "browser-localstorage-expire";
+
 import { createBlobFromImage, fetchImageFromCache } from "./util";
 
-// A collection of
-const eventNoImage = [
-  "/images/events/event1.png",
-  "/images/events/event2.png",
-  "/images/events/event3.png",
-];
+interface EventsProps {
+  dataSource: string;
+  calendar: string;
+  imageBase?: string;
+  cacheKeyEvents?: string;
+  displayLimit?: number;
+  updateFrequency?: number;
+}
 
-// Constant values for caching and event fetching etc
-const eventSource = `https://docs.google.com/spreadsheets/d/e/2PACX-1vRAHUQzFuZ1O0J7soL5Wud5CEbA3MLv4T4Pqms_KhAueNoFX6h2T0DTGwgaLu92FYWdnFV50Q0F1AHY/pub?gid=0&single=true&output=csv`;
-const eventCalendar = `https://calendar.google.com/calendar/embed?src=c_8219055ac4671ef4f7faec2be6f2db0d38d1e3b23c3b4e94d81b71fdc3c6a0e4%40group.calendar.google.com&ctz=Europe%2FLondon`;
-const eventImageBase = `https://lh3.googleusercontent.com/d/`;
-
-// Cache keys for events and images
-const cacheKeyEvents = "event-data";
-const cacheKeyImages = "event-images";
-
-// How many events to display in the component
-const eventDisplayLimit = 4;
-// How often a client should fetch from the calendar
-const eventUpdateFrequency = 30;
-
-// Our event component
+// Our event data should be structured like this
 interface EventProps {
   title: string;
   description: string;
@@ -46,6 +38,27 @@ interface CalendarData {
   imageID: string;
 }
 
+// A collection of placeholder images
+const eventNoImage = [
+  "/images/events/event1.png",
+  "/images/events/event2.png",
+  "/images/events/event3.png",
+];
+
+// Values for caching and event fetching etc
+let eventImageBase = `https://lh3.googleusercontent.com/d/`;
+// Cache keys for events and images
+let cacheKeyEvents = "event-data";
+// How many events to display in the component
+let eventDisplayLimit = 4;
+// How often a client should fetch from the calendar
+let eventUpdateFrequency = 30;
+
+/**
+ * Creates a new event block with the details specified
+ * @param props what details to display in the event block
+ * @returns an event block
+ */
 function Event(props: EventProps) {
   return (
     <>
@@ -74,7 +87,10 @@ function Event(props: EventProps) {
   );
 }
 
-// For use when the data is still being retrieved.
+/**
+ * Creates a placeholder whilst event data and images are being loaded
+ * @returns renders a placeholder
+ */
 function PlaceholderEvent() {
   return (
     <>
@@ -97,18 +113,27 @@ function PlaceholderEvent() {
   );
 }
 
-// Grabbing the data from our google calendar or from cache
-const Events = () => {
+/**
+ * Fetches and renderers events specified on the provided event calendar.
+ * @returns a set of an upcoming events on an event calendar.
+ */
+const Events = (props: EventsProps) => {
   const [events, updateEvents] = useState<CalendarData[]>();
   const [images, updateImages] = useState<any>();
+
+  if (props.imageBase != null) eventImageBase = props.imageBase;
+  if (props.displayLimit != null) eventDisplayLimit = props.displayLimit;
+  if (props.updateFrequency != null)
+    eventUpdateFrequency = props.updateFrequency;
+
   useEffect(() => {
-    const fetchEvents = async () => {
+    const fetchData = async () => {
       const localCache = browserLocalstorage();
       let eventData = localCache.getItem(cacheKeyEvents) as string;
 
       // Check if a cached version of events exist on the browser
       if (eventData == null) {
-        const resp = await fetch(eventSource);
+        const resp = await fetch(props.dataSource);
         eventData = await resp.text();
 
         // Cache the retrieved CSV data for 30 minutes (by default)
@@ -129,6 +154,7 @@ const Events = () => {
       const parsedData = (parsedResult as ParseResult<CalendarData>).data;
       const imageData = {} as any;
 
+      // Pre-render and caches the event images as URI blobs
       for (var i = 0; i < parsedData.length; i++) {
         const cEvent = parsedData[i];
         if (cEvent.imageID != "") {
@@ -145,10 +171,11 @@ const Events = () => {
         }
       }
 
+      // Set the new data into the variables
       updateImages(imageData);
       updateEvents(parsedData);
     };
-    fetchEvents();
+    fetchData();
   }, []);
 
   return (
@@ -176,12 +203,12 @@ const Events = () => {
             <i
               className="material-icons"
               onClick={() => {
-                window.location.href = eventCalendar;
+                window.location.href = props.calendar;
               }}
             >
               event
             </i>
-            <a href={eventCalendar}> View full event calendar</a>
+            <a href={props.calendar}> View full event calendar</a>
           </p>
         </>
       ) : (
