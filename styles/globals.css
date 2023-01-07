@@ -18,6 +18,11 @@ body {
 a {
   text-decoration: none;
   color: #000;
+  transition: all 0.25s ease;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
 }
 
 .subtitle {
@@ -115,6 +120,21 @@ a {
   padding: 4vw;
   padding-left: 7vw;
   padding-right: 7vw;
+}
+
+.events a {
+  color: #000000;
+  vertical-align: middle !important;
+}
+
+.events a:hover {
+  color: #f59e45;
+}
+
+.events i {
+  color: #f59e45;
+  cursor: pointer;
+  vertical-align: middle !important;
 }
 
 .events .title {

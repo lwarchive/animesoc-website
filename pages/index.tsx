@@ -23,6 +23,10 @@ const Landing: NextPage = () => {
       <MobileMenu />
       <About />
       <JoinUs />
+      <Events
+        dataSource={`https://docs.google.com/spreadsheets/d/e/2PACX-1vRAHUQzFuZ1O0J7soL5Wud5CEbA3MLv4T4Pqms_KhAueNoFX6h2T0DTGwgaLu92FYWdnFV50Q0F1AHY/pub?gid=0&single=true&output=csv`}
+        calendar={`https://calendar.google.com/calendar/embed?src=c_8219055ac4671ef4f7faec2be6f2db0d38d1e3b23c3b4e94d81b71fdc3c6a0e4%40group.calendar.google.com&ctz=Europe%2FLondon`}
+      />
       <Committee />
       <Footer />
     </>
