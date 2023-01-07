@@ -99,6 +99,7 @@ a {
   padding: 2vw;
   padding-left: 7vw;
   padding-right: 7vw;
+  padding-bottom: 4vw;
   background-color: #8dd5ff;
 }
 
@@ -212,7 +213,14 @@ a {
 .committee-members .title {
   text-align: center;
   padding-top: 2vw;
+  font-size: 3.5rem;
   background-color: rgba(255, 255, 255, 0.5);
+}
+
+@media (min-width: 768px) {
+  .committee-members .title {
+    font-size: 4.5rem;
+  }
 }
 
 .committee-container {
