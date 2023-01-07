@@ -1,19 +1,33 @@
+import { useState } from "react";
 import links from "./data/join-us.json";
+
+interface ColourProps {
+  normal: string;
+  hover: string;
+}
 
 interface LinkProps {
   text: string;
   link: string;
-  colour: string;
+  colour: ColourProps;
   icon: string;
 }
 
 function Link(props: LinkProps) {
+  const [isFocused, setFocus] = useState(false);
+
   return (
     <>
       <a href={props.link}>
         <div
-          className="link flex flex-col items-center lg:h-full "
-          style={{ backgroundColor: props.colour }}
+          className="link flex flex-col h-48 items-center lg:h-full "
+          onMouseOver={() => setFocus(true)}
+          onMouseLeave={() => setFocus(false)}
+          style={{
+            backgroundColor: !isFocused
+              ? props.colour.normal
+              : props.colour.hover,
+          }}
         >
           <img src={props.icon} alt={props.text} className="logo w-10" />
           <span className="block">{props.text}</span>
