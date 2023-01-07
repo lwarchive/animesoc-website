@@ -274,6 +274,27 @@ a {
   padding-bottom: 2vw;
 }
 
+.committee-course {
+  font-size: 1.25rem;
+}
+
+.committee-anime {
+  padding-bottom: 2vw;
+}
+
+.committee-anime i {
+  color: #f59e45;
+  vertical-align: middle !important;
+}
+
+.committee-anime a {
+  vertical-align: middle !important;
+}
+
+.committee-anime span {
+  vertical-align: middle !important;
+}
+
 .footer {
   background-color: #ffffff;
   text-align: center;
