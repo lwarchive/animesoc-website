@@ -3,19 +3,37 @@
     {
       "name": "***REMOVED***",
       "role": "President",
-      "description": "3rd Year Biology<br />Favourite Anime: ***REMOVED***<br />***REMOVED***",
+      "course": "3rd Year Biology",
+      "favouriteAnime": {
+        "displayName": "***REMOVED***",
+        "link": "***REMOVED***"
+      },
+      "trivia": "***REMOVED***",
+      "description": "",
       "portrait": "/images/committee/president.png"
     },
     {
       "name": "***REMOVED***",
       "role": "Secretary",
-      "description": "2nd Year Computer Science<br />Favourite Anime: ***REMOVED***<br />***REMOVED***",
+      "course": "2nd Year Computer Science",
+      "favouriteAnime": {
+        "displayName": "***REMOVED***",
+        "link": "***REMOVED***"
+      },
+      "trivia": "***REMOVED***",
+      "description": "",
       "portrait": "/images/committee/secretary.png"
     },
     {
       "name": "Leo",
       "role": "Treasurer",
-      "description": "2nd Year Computer Science<br />Favourite Anime: Steins;Gate<br />Accidentally entered a masters lecture in Week 1 and was too awkward to leave.",
+      "course": "2nd Year Computer Science",
+      "favouriteAnime": {
+        "displayName": "Steins;Gate",
+        "link": "https://anilist.co/anime/9253/SteinsGate/"
+      },
+      "trivia": "Accidentally entered a masters lecture in Week 1 and was too awkward to leave.",
+      "description": "",
       "portrait": "/images/committee/treasurer.png"
     }
   ]
