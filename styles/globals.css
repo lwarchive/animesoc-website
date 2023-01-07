@@ -230,6 +230,15 @@ a {
   }
 }
 
+@media (min-width: 1024px) {
+  .committee-member-info .item-description {
+    min-height: 7rem;
+  }
+  .committee-course {
+    min-height: 3.75rem;
+  }
+}
+
 .committee-container {
   background-color: rgba(255, 255, 255, 0.5);
   padding: 2vw;
@@ -272,14 +281,12 @@ a {
 .committee-member-info .item-description {
   font-size: 1rem;
   font-weight: normal;
-  min-height: 7rem;
   padding: 1vw;
   padding-bottom: 2vw;
 }
 
 .committee-course {
   font-size: 1.25rem;
-  min-height: 3.75rem;
 }
 
 .committee-anime {
