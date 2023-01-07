@@ -18,6 +18,7 @@ body {
 a {
   text-decoration: none;
   color: #000;
+
   transition: all 0.25s ease;
   -webkit-transition: all 0.25s ease;
   -moz-transition: all 0.25s ease;
@@ -115,6 +116,12 @@ a {
   padding: 2vw;
   margin: 1vw;
   color: white;
+
+  transition: all 0.25s ease;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
 }
 
 .events {
