@@ -1,11 +1,18 @@
 import members from "./data/committee.json";
 import parse from "html-react-parser";
 
+interface FavouriteAnime {
+  displayName: string;
+  link: string;
+}
+
 interface CommitteeProps {
   name: string;
   role: string;
+  course: string;
+  favouriteAnime: FavouriteAnime;
+  trivia: string;
   portrait: string;
-  description: string;
 }
 
 function CommitteeMember(props: CommitteeProps) {
@@ -16,7 +23,16 @@ function CommitteeMember(props: CommitteeProps) {
         <div className="committee-member-info">
           <p className="item-title">{props.name}</p>
           <p className="item-subtitle">{props.role}</p>
-          <p className="item-description">{parse(props.description)}</p>
+          <p className="committee-course">{props.course}</p>
+          <p className="item-description">{parse(props.trivia)}</p>
+          <p className="committee-anime">
+            <i className="material-icons">favorite</i>
+            <span> Anime:</span>
+            <a href={props.favouriteAnime.link}>
+              {" "}
+              {props.favouriteAnime.displayName}
+            </a>
+          </p>
         </div>
       </div>
     </>
@@ -35,8 +51,10 @@ function Committee() {
                 key={index}
                 name={item.name}
                 role={item.role}
+                course={item.course}
+                favouriteAnime={item.favouriteAnime}
+                trivia={item.trivia}
                 portrait={item.portrait}
-                description={item.description}
               />
             );
           })}
