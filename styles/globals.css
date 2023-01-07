@@ -272,12 +272,14 @@ a {
 .committee-member-info .item-description {
   font-size: 1rem;
   font-weight: normal;
+  min-height: 7rem;
   padding: 1vw;
   padding-bottom: 2vw;
 }
 
 .committee-course {
   font-size: 1.25rem;
+  min-height: 3.75rem;
 }
 
 .committee-anime {
@@ -295,7 +297,7 @@ a {
 }
 
 .committee-anime a:hover {
-  color: #000;
+  color: #fff;
 }
 
 .committee-anime span {

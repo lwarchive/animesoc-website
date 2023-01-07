@@ -18,7 +18,7 @@ interface CommitteeProps {
 function CommitteeMember(props: CommitteeProps) {
   return (
     <>
-      <div className="committee-member max-w-sm grow">
+      <div className="committee-member">
         <img
           className="object-scale-down aspect-square"
           src={`${props.portrait}`}
@@ -30,8 +30,8 @@ function CommitteeMember(props: CommitteeProps) {
           <p className="committee-course">{props.course}</p>
           <p className="item-description">{parse(props.trivia)}</p>
           <p className="committee-anime">
-            <i className="material-icons">favorite</i>
-            <span> Anime:</span>
+            <i className="material-icons">favorite</i> Anime:
+            <br />
             <a href={props.favouriteAnime.link}>
               {" "}
               {props.favouriteAnime.displayName}
