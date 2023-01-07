@@ -3,6 +3,7 @@ import { ParseResult } from "papaparse";
 import parse from "html-react-parser";
 import React, { useEffect, useState } from "react";
 import browserLocalstorage from "browser-localstorage-expire";
+import { createBlobFromImage, fetchImageFromCache } from "./util";
 
 // A collection of
 const eventNoImage = [
@@ -14,6 +15,7 @@ const eventNoImage = [
 // Constant values for caching and event fetching etc
 const eventSource = `https://docs.google.com/spreadsheets/d/e/2PACX-1vRAHUQzFuZ1O0J7soL5Wud5CEbA3MLv4T4Pqms_KhAueNoFX6h2T0DTGwgaLu92FYWdnFV50Q0F1AHY/pub?gid=0&single=true&output=csv`;
 const eventCalendar = `https://calendar.google.com/calendar/embed?src=c_8219055ac4671ef4f7faec2be6f2db0d38d1e3b23c3b4e94d81b71fdc3c6a0e4%40group.calendar.google.com&ctz=Europe%2FLondon`;
+const eventImageBase = `https://lh3.googleusercontent.com/d/`;
 
 // Cache keys for events and images
 const cacheKeyEvents = "event-data";
@@ -41,7 +43,7 @@ interface CalendarData {
   location: string;
   startDate: string;
   endDate: string;
-  imageURL: string;
+  imageID: string;
 }
 
 function Event(props: EventProps) {
@@ -51,7 +53,7 @@ function Event(props: EventProps) {
         <img
           className="object-fill object-center md:w-64 lg:object-left"
           src={
-            props.image == ""
+            props.image == null
               ? eventNoImage[Math.floor(Math.random() * eventNoImage.length)]
               : props.image
           }
@@ -98,6 +100,7 @@ function PlaceholderEvent() {
 // Grabbing the data from our google calendar or from cache
 const Events = () => {
   const [events, updateEvents] = useState<CalendarData[]>();
+  const [images, updateImages] = useState<any>();
   useEffect(() => {
     const fetchEvents = async () => {
       const localCache = browserLocalstorage();
@@ -124,7 +127,25 @@ const Events = () => {
         header: true,
       });
       const parsedData = (parsedResult as ParseResult<CalendarData>).data;
+      const imageData = {} as any;
 
+      for (var i = 0; i < parsedData.length; i++) {
+        const cEvent = parsedData[i];
+        if (cEvent.imageID != "") {
+          const cached = fetchImageFromCache(cEvent.imageID);
+
+          imageData[cEvent.imageID] =
+            cached == ""
+              ? await createBlobFromImage(
+                  `${eventImageBase}${cEvent.imageID}`,
+                  cEvent.imageID,
+                  eventDisplayLimit
+                )
+              : cached;
+        }
+      }
+
+      updateImages(imageData);
       updateEvents(parsedData);
     };
     fetchEvents();
@@ -137,6 +158,8 @@ const Events = () => {
         <>
           {events.slice(0, eventDisplayLimit).map((item, index) => {
             const dateTime = new Date(item.startDate);
+            const imageURL = images[item.imageID];
+
             return (
               <Event
                 key={index}
@@ -145,7 +168,7 @@ const Events = () => {
                 time={dateTime.toLocaleTimeString()}
                 location={item.location}
                 description={item.description}
-                image={item.imageURL}
+                image={imageURL}
               />
             );
           })}
