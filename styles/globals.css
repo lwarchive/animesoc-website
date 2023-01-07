@@ -283,6 +283,11 @@ a {
   color: #f59e45;
 }
 
+.footer a:hover {
+  text-decoration: none;
+  color: #000;
+}
+
 .floating-menu {
   z-index: 999999999;
 }
