@@ -18,9 +18,6 @@ function Document() {
           href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&amp;display=swap"
           rel="stylesheet"
         />
-        <title>
-          Home - Anime and Manga Society of Royal Holloway, University of London
-        </title>
         <meta
           name="title"
           content="Home - Anime and Manga Society of Royal Holloway, University of London"
@@ -29,9 +26,9 @@ function Document() {
           name="description"
           content="CS Student, programmer, and keen Dr.Pepper drinker"
         />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge, chrome=1" />
         <meta
-          http-equiv="Content-Security-Policy"
+          httpEquiv="Content-Security-Policy"
           content="block-all-mixed-content"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />

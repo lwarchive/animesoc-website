@@ -12,6 +12,11 @@ import Head from "next/head";
 const Landing: NextPage = () => {
   return (
     <>
+      <Head>
+        <title>
+          Home - Anime and Manga Society of Royal Holloway, University of London
+        </title>
+      </Head>
       <Home />
       <Menu />
       <MobileMenu />
