@@ -18,8 +18,12 @@ interface CommitteeProps {
 function CommitteeMember(props: CommitteeProps) {
   return (
     <>
-      <div className="committee-member max-w-sm">
-        <img src={`${props.portrait}`} alt={props.name} />
+      <div className="committee-member max-w-sm grow">
+        <img
+          className="object-scale-down aspect-square"
+          src={`${props.portrait}`}
+          alt={props.name}
+        />
         <div className="committee-member-info">
           <p className="item-title">{props.name}</p>
           <p className="item-subtitle">{props.role}</p>

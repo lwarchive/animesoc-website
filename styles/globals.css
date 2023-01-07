@@ -235,6 +235,7 @@ a {
   padding: 2vw;
   padding-top: 0;
   align-items: center;
+  justify-content: stretch;
 }
 
 .committee-member .committee-member-info {
@@ -245,6 +246,7 @@ a {
 
 .committee-member {
   margin: 3vw;
+  align-self: stretch;
 }
 
 .committee-member img {
@@ -288,7 +290,12 @@ a {
 }
 
 .committee-anime a {
+  color: #f59e45;
   vertical-align: middle !important;
+}
+
+.committee-anime a:hover {
+  color: #000;
 }
 
 .committee-anime span {
