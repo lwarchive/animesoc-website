@@ -201,7 +201,7 @@ const Events = (props: EventsProps) => {
           })}
           <p className="text-center md:text-2xl lg:text-4xl">
             <i
-              className="material-icons"
+              className="material-icons md:text-2xl lg:text-4xl"
               onClick={() => {
                 window.location.href = props.calendar;
               }}
