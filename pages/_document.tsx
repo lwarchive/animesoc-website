@@ -31,7 +31,6 @@ function Document() {
           httpEquiv="Content-Security-Policy"
           content="block-all-mixed-content"
         />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="og:title"
           content="Anime and Manga Society of Royal Holloway, University of London"
