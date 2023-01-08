@@ -30,7 +30,9 @@ function CommitteeMember(props: CommitteeProps) {
           <p className="committee-course">{props.course}</p>
           <p className="item-description">{parse(props.trivia)}</p>
           <p className="committee-anime">
-            <i className="material-icons">favorite</i> Anime:
+            <i className="material-icons">favorite</i>
+            <span> Anime</span>
+
             <br />
             <a href={props.favouriteAnime.link}>
               {" "}
