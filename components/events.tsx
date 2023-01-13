@@ -64,7 +64,7 @@ function Event(props: EventProps) {
     <>
       <div className="event flex flex-col lg:flex-row pb-8">
         <img
-          className="object-fill object-center md:w-64 lg:object-left"
+          className="object-fill object-center md:w-64 rounded-t-lg lg:rounded-none lg:rounded-tl-lg lg:rounded-bl-lg lg:object-left"
           src={
             props.image == null
               ? eventNoImage[Math.floor(Math.random() * eventNoImage.length)]
@@ -72,7 +72,7 @@ function Event(props: EventProps) {
           }
           alt={props.title}
         />
-        <div className="item-info pt-4 pb-4">
+        <div className="item-info pt-4 pb-4 rounded-b-lg lg:rounded-none lg:rounded-br-lg lg:rounded-tr-lg">
           <p className="item-title ">
             {props.title}
             <span className="font-semibold text-xl block 2xl:inline 2xl:text-2xl 2xl:font-normal 2xl:float-right">

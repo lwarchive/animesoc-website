@@ -20,7 +20,7 @@ function Link(props: LinkProps) {
     <>
       <a href={props.link}>
         <div
-          className="link flex flex-col h-48 items-center lg:h-full "
+          className="link flex flex-col h-48 items-center rounded lg:h-full "
           onMouseOver={() => setFocus(true)}
           onMouseLeave={() => setFocus(false)}
           style={{

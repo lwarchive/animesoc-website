@@ -20,11 +20,11 @@ function CommitteeMember(props: CommitteeProps) {
     <>
       <div className="committee-member">
         <img
-          className="object-scale-down aspect-square"
+          className="object-scale-down aspect-square rounded-t-lg"
           src={`${props.portrait}`}
           alt={props.name}
         />
-        <div className="committee-member-info">
+        <div className="committee-member-info rounded-b-lg">
           <p className="item-title">{props.name}</p>
           <p className="item-subtitle">{props.role}</p>
           <p className="committee-course">{props.course}</p>
