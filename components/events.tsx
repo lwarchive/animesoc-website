@@ -199,12 +199,11 @@ const Events = (props: EventsProps) => {
               />
             );
           })}
-          <p className="text-center md:text-2xl lg:text-4xl">
+          <p className="events-view-more text-center md:text-2xl lg:text-4xl" onClick={() => {
+                window.location.href = props.calendar;
+              }}>
             <i
               className="material-icons md:text-2xl lg:text-4xl"
-              onClick={() => {
-                window.location.href = props.calendar;
-              }}
             >
               event
             </i>

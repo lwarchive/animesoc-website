@@ -132,6 +132,19 @@ a {
   padding-right: 7vw;
 }
 
+.events-view-more {
+  color: #f59e45;
+  cursor: pointer;
+}
+
+.events-view-more i {
+  vertical-align: middle !important;
+}
+
+.events-view-more:hover a {
+  color: #f59e45;
+}
+
 .events a {
   color: #000000;
   vertical-align: middle !important;
@@ -139,12 +152,6 @@ a {
 
 .events a:hover {
   color: #f59e45;
-}
-
-.events i {
-  color: #f59e45;
-  cursor: pointer;
-  vertical-align: middle !important;
 }
 
 .events .title {
@@ -336,4 +343,12 @@ a {
 
 .floating-menu {
   z-index: 999999999;
+}
+
+* {
+  transition: all 0.25s ease;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
 }
