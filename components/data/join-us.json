@@ -4,25 +4,28 @@
       "text": "Membership",
       "link": "https://www.su.rhul.ac.uk/societies/a-z/animeandmanga/",
       "icon": "/images/rhsu-logo.png",
-      "colour": "#F59E45"
+      "colour": {
+        "normal": "#F59E45",
+        "hover": "#be650a"
+      }
     },
     {
       "text": "Discord",
       "link": "https://rhulani.me/discord",
       "icon": "/images/discord-logo.png",
-      "colour": "#646673"
-    },
-    {
-      "text": "Facebook",
-      "link": "https://www.facebook.com/groups/animemangarhul",
-      "icon": "/images/facebook-logo.png",
-      "colour": "#16356C"
+      "colour": {
+        "normal": "#7289DA",
+        "hover": "#4E5D94"
+      }
     },
     {
       "text": "Instagram",
       "link": "https://www.instagram.com/rhulanime/",
       "icon": "/images/instagram-logo.png",
-      "colour": "#784784"
+      "colour": {
+        "normal": "#784784",
+        "hover": "#54325d"
+      }
     }
   ]
 }
