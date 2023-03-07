@@ -32,6 +32,39 @@
       },
       "trivia": "Accidentally entered a masters lecture in Week 1 and was too awkward to leave.",
       "portrait": "/images/committee/treasurer.png"
+    },
+    {
+      "name": "***REMOVED***",
+      "role": "Diversity and Inclusivity Rep",
+      "course": "2nd Year Computer Science",
+      "favouriteAnime": {
+        "displayName": "***REMOVED***",
+        "link": "https://anilist.co/anime/20997/***REMOVED***/"
+      },
+      "trivia": "***REMOVED***",
+      "portrait": "/images/committee/diversityRep.png"
+    },
+    {
+      "name": "***REMOVED***",
+      "role": "Social Secretary",
+      "course": "2nd Year Computer Science",
+      "favouriteAnime": {
+        "displayName": "***REMOVED***",
+        "link": "***REMOVED***"
+      },
+      "trivia": "***REMOVED***",
+      "portrait": "/images/committee/socialSecretary.png"
+    },
+    {
+      "name": "Alex",
+      "role": "Media Rep",
+      "course": "3rd Business Studies",
+      "favouriteAnime": {
+        "displayName": "Neon Genesis Evangelion",
+        "link": "https://anilist.co/anime/30/Shin-Seiki-Evangelion/"
+      },
+      "trivia": "Owns way too many anime figures.",
+      "portrait": "/images/committee/media.png"
     }
   ]
 }
