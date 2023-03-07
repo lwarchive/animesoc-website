@@ -18,13 +18,13 @@ interface CommitteeProps {
 function CommitteeMember(props: CommitteeProps) {
     return (
         <>
-            <div className="committee-member lg:max-w-[25rem] p-2 flex flex-col">
+            <div className="committee-member p-2 flex flex-col lg:p-0 ">
                 <img
                     className="object-scale-down aspect-square rounded-t-lg "
                     src={`${props.portrait}`}
                     alt={props.name}
                 />
-                <div className="committee-member-info rounded-b-lg h-full">
+                <div className="committee-member-info rounded-b-lg h-full flex flex-col justify-evenly">
                     <p className="item-title">{props.name}</p>
                     <p className="item-subtitle">{props.role}</p>
                     <p className="committee-course">{props.course}</p>
@@ -53,7 +53,7 @@ function Committee() {
         >
             <div className="backdrop-blur-sm rounded-sm">
                 <div className="title">Committee</div>
-                <div className="committee-container grid grid-cols-3 gap-12">
+                <div className="committee-container flex flex-col lg:grid lg:grid-cols-3 lg:gap-12">
                     {members.committeeMembers.map((item, index) => {
                         return (
                             <CommitteeMember
