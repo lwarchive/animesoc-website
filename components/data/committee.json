@@ -1,58 +1,58 @@
 {
   "committeeMembers": [
     {
-      "name": "***REMOVED***",
+      "name": "Mitsuru",
       "role": "President",
-      "course": "3rd Year Biology",
+      "course": "3rd Year",
       "favouriteAnime": {
-        "displayName": "***REMOVED***",
-        "link": "***REMOVED***"
+        "displayName": "Death Note",
+        "link": "https://anilist.co/anime/1535/DEATH-NOTE/"
       },
-      "trivia": "***REMOVED***",
+      "trivia": "Is an excellent pianist and enjoys playing classical music.",
       "portrait": "/images/committee/president.png"
     },
     {
-      "name": "***REMOVED***",
+      "name": "Akihiko",
       "role": "Secretary",
-      "course": "2nd Year Computer Science",
+      "course": "3rd Year",
       "favouriteAnime": {
-        "displayName": "***REMOVED***",
-        "link": "***REMOVED***"
+        "displayName": "Hajime no Ippo: THE FIGHTING!",
+        "link": "https://anilist.co/anime/263/Hajime-no-Ippo-THE-FIGHTING/"
       },
-      "trivia": "***REMOVED***",
+      "trivia": "Has an insatiable appetite and is always seen snacking.",
       "portrait": "/images/committee/secretary.png"
     },
     {
-      "name": "Leo",
+      "name": "Junpei",
       "role": "Treasurer",
-      "course": "2nd Year Computer Science",
+      "course": "2nd Year",
       "favouriteAnime": {
-        "displayName": "Steins;Gate",
-        "link": "https://anilist.co/anime/9253/SteinsGate/"
+        "displayName": "One Piece",
+        "link": "https://anilist.co/anime/21/ONE-PIECE/"
       },
-      "trivia": "Accidentally entered a masters lecture in Week 1 and was too awkward to leave.",
+      "trivia": "Has a fear of ghosts and often freaks out during ghost stories.",
       "portrait": "/images/committee/treasurer.png"
     },
     {
-      "name": "***REMOVED***",
+      "name": "Makoto",
       "role": "Diversity and Inclusivity Rep",
-      "course": "2nd Year Computer Science",
+      "course": "2nd Year",
       "favouriteAnime": {
-        "displayName": "***REMOVED***",
-        "link": "https://anilist.co/anime/20997/***REMOVED***/"
+        "displayName": "Attack On Titan",
+        "link": "https://anilist.co/anime/16498/Shingeki-no-Kyojin/"
       },
-      "trivia": "***REMOVED***",
+      "trivia": "Has a tendency to fall asleep in class.",
       "portrait": "/images/committee/diversityRep.png"
     },
     {
-      "name": "***REMOVED***",
+      "name": "Yukari",
       "role": "Social Secretary",
-      "course": "2nd Year Computer Science",
+      "course": "2nd Year",
       "favouriteAnime": {
-        "displayName": "***REMOVED***",
-        "link": "***REMOVED***"
+        "displayName": "Sailor Moon",
+        "link": "https://anilist.co/anime/530/Bishoujo-Senshi-Sailor-Moon/"
       },
-      "trivia": "***REMOVED***",
+      "trivia": "Is a skilled archer and often participates in competitions.",
       "portrait": "/images/committee/socialSecretary.png"
     },
     {
