@@ -61,6 +61,8 @@ let eventUpdateFrequency = 30;
  * @returns an event block
  */
 function Event(props: EventProps) {
+  const baseURL = useRouter().basePath;
+
   return (
     <>
       <div className="event flex flex-col lg:flex-row pb-8">
@@ -68,8 +70,8 @@ function Event(props: EventProps) {
           className="object-fill object-center md:w-64 rounded-t-lg lg:rounded-none lg:rounded-tl-lg lg:rounded-bl-lg lg:object-left"
           src={
             props.image == null
-              ? `${useRouter().basePath}${eventNoImage[Math.floor(Math.random() * eventNoImage.length)]}`
-              : `${useRouter().basePath}${props.image}`
+              ? `${baseURL}${eventNoImage[Math.floor(Math.random() * eventNoImage.length)]}`
+              : `${baseURL}${props.image}`
           }
           alt={props.title}
         />
