@@ -1,4 +1,5 @@
 import titleCopy from "./data/home.json";
+import { useRouter } from 'next/router';
 
 function Home() {
   return (
@@ -8,7 +9,7 @@ function Home() {
           <div className="home-title flex flex-col text-center lg:flex-row pt-8 pb-8">
             <img
               className="w-40 lg:w-2/12"
-              src={titleCopy.logo}
+              src={`${useRouter().basePath}${titleCopy.logo}`}
               alt={titleCopy.logoAlt}
             />
             <div className="my-5 mx-5 lg:w-1/2">

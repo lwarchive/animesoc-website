@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useRouter } from 'next/router';
 import links from "./data/join-us.json";
 
 interface ColourProps {
@@ -29,7 +30,7 @@ function Link(props: LinkProps) {
               : props.colour.hover,
           }}
         >
-          <img src={props.icon} alt={props.text} className="logo w-10" />
+          <img src={`${useRouter().basePath}${props.icon}`} alt={props.text} className="logo w-10" />
           <span className="block">{props.text}</span>
         </div>
       </a>

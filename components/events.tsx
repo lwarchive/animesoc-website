@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useRouter } from 'next/router';
 
 import Papa from "papaparse";
 import { ParseResult } from "papaparse";
@@ -40,9 +41,9 @@ interface CalendarData {
 
 // A collection of placeholder images
 const eventNoImage = [
-  "/images/events/event1.png",
-  "/images/events/event2.png",
-  "/images/events/event3.png",
+  `/images/events/event1.png`,
+  `/images/events/event2.png`,
+  `/images/events/event3.png`,
 ];
 
 // Values for caching and event fetching etc
@@ -67,8 +68,8 @@ function Event(props: EventProps) {
           className="object-fill object-center md:w-64 rounded-t-lg lg:rounded-none lg:rounded-tl-lg lg:rounded-bl-lg lg:object-left"
           src={
             props.image == null
-              ? eventNoImage[Math.floor(Math.random() * eventNoImage.length)]
-              : props.image
+              ? `${useRouter().basePath}${eventNoImage[Math.floor(Math.random() * eventNoImage.length)]}`
+              : `${useRouter().basePath}${props.image}`
           }
           alt={props.title}
         />
@@ -97,7 +98,7 @@ function PlaceholderEvent() {
       <div className="event flex flex-col lg:flex-row pb-8">
         <img
           className="object-fill object-center md:w-64 lg:object-left"
-          src={eventNoImage[Math.floor(Math.random() * eventNoImage.length)]}
+          src={`${useRouter().basePath}${eventNoImage[Math.floor(Math.random() * eventNoImage.length)]}`}
           alt={"Loading..."}
         />
         <div className="item-info pt-4 pb-4">
@@ -163,10 +164,10 @@ const Events = (props: EventsProps) => {
           imageData[cEvent.imageID] =
             cached == ""
               ? await createBlobFromImage(
-                  `${eventImageBase}${cEvent.imageID}`,
-                  cEvent.imageID,
-                  eventDisplayLimit
-                )
+                `${eventImageBase}${cEvent.imageID}`,
+                cEvent.imageID,
+                eventDisplayLimit
+              )
               : cached;
         }
       }
@@ -200,8 +201,8 @@ const Events = (props: EventsProps) => {
             );
           })}
           <p className="events-view-more text-center md:text-2xl lg:text-4xl" onClick={() => {
-                window.location.href = props.calendar;
-              }}>
+            window.location.href = props.calendar;
+          }}>
             <i
               className="material-icons md:text-2xl lg:text-4xl"
             >

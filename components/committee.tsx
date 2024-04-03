@@ -1,3 +1,5 @@
+import { useRouter } from 'next/router';
+
 import members from "./data/committee.json";
 import parse from "html-react-parser";
 
@@ -21,7 +23,7 @@ function CommitteeMember(props: CommitteeProps) {
             <div className="committee-member p-2 flex flex-col lg:p-0 ">
                 <img
                     className="object-scale-down aspect-square rounded-t-lg "
-                    src={`${props.portrait}`}
+                    src={`${useRouter().basePath}${props.portrait}`}
                     alt={props.name}
                 />
                 <div className="committee-member-info rounded-b-lg h-full flex flex-col justify-evenly">
