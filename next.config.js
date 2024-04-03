@@ -2,10 +2,11 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  basePath: '/rhulanisoc',
   async redirects() {
     return [
       {
-        source: "/discord",
+        source: "/rhulanisoc/discord",
         destination: "https://discord.gg/s7rEUBSEJG",
         permanent: true,
       },
