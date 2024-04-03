@@ -1,0 +1,52 @@
+name: Deploy to archive
+on:
+  push:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v4
+
+      - name: Install Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18.x"
+
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      - name: Build website
+        run: |
+          pnpm i
+          pnpm export
+
+      - name: Login to Azure CLI
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_LOGIN }}
+
+      - name: Upload to blob storage
+        uses: azure/CLI@v1
+        with:
+          inlineScript: |
+            az storage blob delete-batch --account-name lwarchivestorage --auth-mode key -s '$web' --pattern "rhulanisoc/*"
+            az storage blob upload-batch --account-name lwarchivestorage --auth-mode key -d '$web' --destination-path rhulanisoc -s out
+
+      - name: Purge CDN endpoint
+        uses: azure/CLI@v1
+        with:
+          inlineScript: |
+            az cdn endpoint purge --content-paths  "/rhulanisoc/*" --profile-name "lwarchivecdn" --name "lwarchive" --resource-group "portflio"
+
+      - name: Uninstall pnpm
+        run: |
+          npm uninstall -g pnpm
+        if: always()
+
+      - name: Logout from Azure CLI
+        run: |
+          az logout
+        if: always()
