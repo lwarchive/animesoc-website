@@ -31,8 +31,8 @@ function Document() {
           content="Anime and Manga Society of Royal Holloway, University of London"
         />
         <meta name="og:type" content="website" />
-        <meta name="og:url" content="https://rhulani.me/" />
-        <meta name="og:image" content="https://rhulani.me/images/logo.png" />
+        <meta name="og:url" content="https://archive.daemondemon.co.uk/rhulanisoc" />
+        <meta name="og:image" content="https://archive.daemondemon.co.uk/rhulanisoc/images/logo.png" />
         <meta name="og:image:type" content="image/png" />
         <meta name="og:image:width" content="370" />
         <meta name="og:image:height" content="370" />
@@ -51,7 +51,7 @@ function Document() {
         />
         <meta
           name="twitter:image"
-          content="https://rhulani.me/images/logo.png"
+          content="https://archive.daemondemon.co.uk/rhulanisoc/images/logo.png"
         />
         <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
         <meta
