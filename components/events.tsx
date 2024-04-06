@@ -71,7 +71,7 @@ function Event(props: EventProps) {
           src={
             props.image == null
               ? `${baseURL}${eventNoImage[Math.floor(Math.random() * eventNoImage.length)]}`
-              : `${baseURL}${props.image}`
+              : `${props.image}`
           }
           alt={props.title}
         />
